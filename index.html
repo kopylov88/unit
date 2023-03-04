@@ -4,225 +4,1390 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сходи УЖ</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230228203746" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230304211432" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
   <div class="container">
     <div class="header__inner">
-      <nav class="nav">
-        <a class="logo" href="index.html">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path
-              d="M1.8 1.8H22C26.5287 1.8 30.2 5.47127 30.2 10V30.2H10C5.47127 30.2 1.8 26.5287 1.8 22V1.8Z"
-              fill="white"
-              stroke="#0285FF"
-              stroke-width="3.6"
-            />
-          </svg>
-          Сходи УЖ
+      <div class="header__top">
+        <a class="header__logo logo" href="index.html">
+          <img class="logo__img" src="img/icons/logo.svg" alt="logo" />
         </a>
-        <div class="nav__box">
-          <ul class="nav__menu">
-            <li class="nav__menu-item wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
-              <a href="index.html" class="nav__menu-link active">Головна</a>
+        <div class="header__phone phone">
+          <a class="header__phone-link" href="tel:08003342233">0800 334 22 33</a>
+          <span class="header__phone-text">Сегодня с 9.00 - 21.00</span>
+        </div>
+        <div class="header__adress">
+          <span class="header__adress-street">Улица Шевченко 18/5</span>
+          <span class="header__adress-city">Город Киев</span>
+        </div>
+        <button class="header__btn btn">Записаться на осмотр</button>
+      </div>
+      <div class="header__bottom">
+        <nav class="nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a class="header__menu-link header__menu-link--active" href="#">Главная</a>
             </li>
-            <li class="nav__menu-item wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
-              <a href="upstairs.html" class="nav__menu-link">Сходи</a>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Квартиры</a>
             </li>
-            <li class="nav__menu-item wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
-              <a href="doors.html" class="nav__menu-link">Двері</a>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Генплан</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Паркинг</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Кладовые</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">О проекте</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Контакты</a>
             </li>
           </ul>
-          <div class="nav__phone-box">
-            <div class="nav__phone">
-              <a class="phone" href="tel:+380503724206">+380503724206</a>
-            </div>
-            <a class="button" href="#">Замовити консультацію</a>
-          </div>
-        </div>
-        <button class="menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
+        </nav>
+        <select class="header__language js-choice" name="language">
+          <option value="ukrain">Украинский</option>
+          <option value="russian" selected>Русский</option>
+        </select>
+      </div>
     </div>
   </div>
 </header>
 
       <main class="main">
-        <div class="banner">
+        <section class="banner">
           <div class="container">
             <div class="banner__inner">
-              <div class="banner__box wow animate__animated animate__fadeInDown">
-                <h1 class="banner__box-title">Сходи та двері</h1>
-                <p class="banner__box-text">
-                  під ключ по Закарпатській області. Надійність та затишок для вашої оселі!
-                </p>
-                <a class="button" href="#">Замовити консультацію</a>
-              </div>
-            </div>
-          </div>
-          <div class="modal">
-            <div class="modal__wrap">
-              <div class="modal__body">
-                <button class="close">
-                  <img src="img/icons/close.svg" alt="close icon" />
-                </button>
-                <h5 class="modal__title">Замовити консультацію</h5>
-                <p class="modal__text">
-                  Щоб замовити консультацію, заповніть форму з права, та ми зв’яжемось з вами найближчим часом!
-                </p>
-                <form class="registration__form" id="registration__form-popup" action="#" method="POST">
-                  <div class="registration__form-item">
-                    <input
-                      class="registration__form-input userNamePopup"
-                      name="userName"
-                      type="text"
-                      placeholder="Ім’я"
-                      autocomplete="off"
-                      required
-                    />
+              <div class="banner__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="banner__slider-item swiper-slide">
+                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
                   </div>
-                  <div class="registration__form-item">
-                    <input
-                      class="registration__form-input userPhonePopup"
-                      name="userPhone"
-                      type="tel"
-                      placeholder="Номер телефону"
-                      autocomplete="off"
-                      required
-                    />
+                  <div class="banner__slider-item swiper-slide">
+                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
                   </div>
-                  <button class="registration__form-btn" type="submit">Відправити</button>
-                </form>
-                <span>Або зателефонуйте за номером</span>
-                <a class="phone" href="tel:+380503724206">+380503724206</a>
+                  <div class="banner__slider-item swiper-slide">
+                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                  </div>
+                  <div class="banner__slider-item swiper-slide">
+                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                  </div>
+                  <div class="banner__slider-item swiper-slide">
+                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                  </div>
+                  <div class="banner__slider-item swiper-slide">
+                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
               </div>
-            </div>
-          </div>
-          <div class="modal-successful">
-            <div class="modal-successful__wrap">
-              <div class="modal-successful__body">
-                <button class="modal-successful__close">
-                  <img src="img/icons/close.svg" alt="close icon" />
-                </button>
-                <h5 class="modal-successful__title">Ваша заявка відправлена!</h5>
-                <p class="modal-successful__text">Ми зв’яжемось з вами найближчим часом.</p>
-                <a class="modal-successful__btn" href="index.html">Повернутись на головний екран</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <section class="about" id="about">
-          <div class="container">
-            <div class="about__inner wow animate__animated animate__fadeInUp">
-              <a class="button" href="#">Замовити консультацію</a>
-              <h2 class="about__title title">Про нас</h2>
-              <div class="about__text">
-                <p class="about__text-item">
-                  Ми консультуємо, виготовляємо, монтуємо якісні сходи та двері під замовлення. Матеріал для сходів -
-                  ясень. для дверей: сосна та ясень. Сходи виготовляються на бетонну основу, металевий каркас та на
-                  дерев’яних косогурах.
-                </p>
-                <p class="about__text-item">
-                  Кожна драбина індивідуальна, і її вартість залежить від розмірів матеріалів і комплектуючих. Вже
-                  більше п’ятнадцяти років наші клієнти задоволенні нашою працею та радять нас знайомим.
-                </p>
+              <div class="banner__box">
+                <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
+                <p class="banner__box-text">Место, где создается экосистема и инфраструктура для развития бизнеса</p>
+                <button class="banner__box-btn btn">Записаться на просмотр</button>
               </div>
             </div>
           </div>
         </section>
-        <div class="catalog">
+        <section class="layout">
           <div class="container">
-            <div class="catalog__inner wow animate__animated animate__fadeInUp">
-              <a class="catalog__link" href="upstairs.html">
-                <picture><source srcset="img/upstairs.webp" type="image/webp"><img class="catalog__link-img" src="img/upstairs.jpg" alt="upstairs" /></picture>
-                <span class="catalog__link-text">Сходи</span>
-              </a>
-              <a class="catalog__link" href="doors.html">
-                <picture><source srcset="img/doors.webp" type="image/webp"><img class="catalog__link-img" src="img/doors.jpg" alt="doors" /></picture>
-                <span class="catalog__link-text">Двері</span>
-              </a>
+            <div class="layout__inner">
+              <h2 class="layout__title title">Выбрать планировку</h2>
+              <div class="layout__filters filters">
+                <div class="filters__item filter-rooms">
+                  <form class="filters__item-form">
+                    <h6 class="filters__item-title">Количество комнат</h6>
+                    <div class="filter-rooms__labels">
+                      <label class="filters__item-label">
+                        <input class="filters__item-checkbox" type="checkbox" />
+                        <span class="filter-rooms__checkbox">Студия</span>
+                      </label>
+                      <label class="filters__item-label">
+                        <input class="filters__item-checkbox" type="checkbox" />
+                        <span class="filter-rooms__checkbox">1</span>
+                      </label>
+                      <label class="filters__item-label">
+                        <input class="filters__item-checkbox" type="checkbox" />
+                        <span class="filter-rooms__checkbox">2</span>
+                      </label>
+                      <label class="filters__item-label">
+                        <input class="filters__item-checkbox" type="checkbox" />
+                        <span class="filter-rooms__checkbox">3+</span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="filters__item filter-price">
+                  <form class="filter__item-form">
+                    <h6 class="filters__item-title">Цена в рублях</h6>
+                    <div class="filters__item-value">
+                      от <span class="price__from"></span> - до <span class="price__to"></span>
+                    </div>
+                    <input
+                      class="range-price"
+                      type="range"
+                      data-type="double"
+                      data-from="2000000"
+                      data-to="4000000"
+                      data-min="1500000"
+                      data-max="5000000"
+                    />
+                  </form>
+                </div>
+                <div class="filters__item filter-square">
+                  <form class="filter__item-form">
+                    <h6 class="filters__item-title">Площадь м<sup>2</sup></h6>
+                    <div class="filters__item-value">
+                      от <span class="square__from"></span> - до <span class="square__to"></span>
+                    </div>
+                    <input
+                      class="range-square"
+                      type="range"
+                      data-type="double"
+                      data-from="34.2"
+                      data-to="51.9"
+                      data-min="19.2"
+                      data-max="105.6"
+                    />
+                  </form>
+                </div>
+                <div class="filters__item filter-floor">
+                  <form class="filter__item-form">
+                    <h6 class="filters__item-title">Этаж</h6>
+                    <div class="filters__item-value">
+                      от <span class="floor__from"></span> - до <span class="floor__to"></span>
+                    </div>
+                    <input
+                      class="range-floor"
+                      type="range"
+                      data-type="double"
+                      data-from="2"
+                      data-to="9"
+                      data-min="1"
+                      data-max="25"
+                    />
+                  </form>
+                </div>
+              </div>
+              <div class="layout__plan">
+                <picture><source srcset="img/plan.webp" type="image/webp"><img class="layout__plan-img" src="img/plan.jpg" alt="plan image" /></picture>
+                <div class="layout__items">
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус А</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус А</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус B</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус B</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус C</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус C</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус D</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус D</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус E</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус E</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус F</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус F</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус G</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус G</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус H</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус H</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус L</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус L</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус M</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус M</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус N</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус N</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус P</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус P</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус S</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус S</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус T</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус T</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout__item">
+                    <span class="layout__item-head">Корпус X</span>
+                    <div class="layout__item-box">
+                      <span class="layout__item-head">Корпус X</span>
+                      <div class="layout__item-info item-info">
+                        <div class="item-info__head">Ввод в эксплуатацию: <span>ІІІ квартал 2024</span></div>
+                        <ul class="item-info__list">
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">Cт</span>
+                            <span class="plan-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">1к</span>
+                            <span class="plan-info__list-value">4 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">2к</span>
+                            <span class="item-info__list-value">2 квартиры</span>
+                          </li>
+                          <li class="item-info__list-item">
+                            <span class="item-info__list-rooms">3к+</span>
+                            <span class="item-info__list-value">9 квартир</span>
+                          </li>
+                        </ul>
+                        <a class="layout__plan-link btn" href="#">Перейти</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="advantages">
+          <div class="container">
+            <div class="advantages__inner">
+              <div class="advantages__head">
+                <h2 class="advantages__title title">Преимущества</h2>
+                <p class="advantages__descr">
+                  На территории жилого квартала находятся: современные ИТ-университеты, школы, детские сады, кафе,
+                  детские площадки. В комплексе запланировано 2746 парковых мест. Также будет реализован современный
+                  медицинский центр, спортивный комплекс, стадион. В офисной части города предусмотрены разнообразные
+                  конференц-залы до 350 мест.
+                </p>
+              </div>
+              <div class="advantages__content">
+                <ul class="advantages__list">
+                  <li class="advantages__list-item">Развитая Инфраструктура</li>
+                  <li class="advantages__list-item">Подземные приемники отходов</li>
+                  <li class="advantages__list-item">Энергоэффективные дома</li>
+                  <li class="advantages__list-item">Зоны отдыха</li>
+                </ul>
+                <div class="advantages__slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="advantages__slider-item">
+                        <picture><source srcset="img/advantages-slider/1.webp" type="image/webp"><img class="advantages__slider-img" src="img/advantages-slider/1.jpg" alt="slider image" /></picture>
+                        <div class="advantages__slider-info">
+                          <h6 class="advantages__slider-name">Unit Frame</h6>
+                          <p class="advantages__slider-text">Современные офисы, конференц-залы</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="advantages__slider-item">
+                        <picture><source srcset="img/advantages-slider/2.webp" type="image/webp"><img class="advantages__slider-img" src="img/advantages-slider/2.jpg" alt="slider image" /></picture>
+                        <div class="advantages__slider-info">
+                          <h6 class="advantages__slider-name">Unit school</h6>
+                          <p class="advantages__slider-text">Лучшее обучение для ваших детей</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="advantages__slider-item">
+                        <picture><source srcset="img/advantages-slider/3.webp" type="image/webp"><img class="advantages__slider-img" src="img/advantages-slider/3.jpg" alt="slider image" /></picture>
+                        <div class="advantages__slider-info">
+                          <h6 class="advantages__slider-name">Unit university</h6>
+                          <p class="advantages__slider-text">ИТ-университет будущего</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="advantages__slider-item">
+                        <picture><source srcset="img/advantages-slider/4.webp" type="image/webp"><img class="advantages__slider-img" src="img/advantages-slider/4.jpg" alt="slider image" /></picture>
+                        <div class="advantages__slider-info">
+                          <h6 class="advantages__slider-name">Electron Corp.</h6>
+                          <p class="advantages__slider-text">Новейшая архитектура</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="advantages__slider-fraction">
+                    <div class="advantages__slider-current">01</div>
+                    <div class="advantages__slider-sepparator">/</div>
+                    <div class="advantages__slider-total">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="layout-slider">
+          <div class="container">
+            <div class="layout-slider__inner">
+              <h2 class="layout-slider__title title">Выбор планировки</h2>
+              <div class="layout-slider__box">
+                <div class="layout-slider__thumbs-box">
+                  <div class="filters">
+                    <div class="filters__item filter-rooms">
+                      <form class="filters__item-form">
+                        <div class="filter-rooms__labels">
+                          <label class="filters__item-label">
+                            <input class="filters__item-checkbox" type="checkbox" />
+                            <span class="filter-rooms__checkbox">Студия</span>
+                          </label>
+                          <label class="filters__item-label">
+                            <input class="filters__item-checkbox" type="checkbox" />
+                            <span class="filter-rooms__checkbox">1</span>
+                          </label>
+                          <label class="filters__item-label">
+                            <input class="filters__item-checkbox" type="checkbox" />
+                            <span class="filter-rooms__checkbox">2</span>
+                          </label>
+                          <label class="filters__item-label">
+                            <input class="filters__item-checkbox" type="checkbox" />
+                            <span class="filter-rooms__checkbox">3+</span>
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <span class="layout-slider__thumbs-total">387 квартир</span>
+                  </div>
+                  <div class="layout-slider__thumbs-slider swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="layout-slider__thumbs-item">
+                          <img
+                            class="layout-slider__thumbs-img"
+                            src="img/layout-slider-thumbs/1.jpg"
+                            alt="layout slider thumb"
+                          />
+                          <span class="layout-slider__thumbs-text">28.3 м² </span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="layout-slider__thumbs-item">
+                          <img
+                            class="layout-slider__thumbs-img"
+                            src="img/layout-slider-thumbs/1.jpg"
+                            alt="layout slider thumb"
+                          />
+                          <span class="layout-slider__thumbs-text">28.3 м² </span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="layout-slider__thumbs-item">
+                          <img
+                            class="layout-slider__thumbs-img"
+                            src="img/layout-slider-thumbs/1.jpg"
+                            alt="layout slider thumb"
+                          />
+                          <span class="layout-slider__thumbs-text">28.3 м² </span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="layout-slider__thumbs-item">
+                          <img
+                            class="layout-slider__thumbs-img"
+                            src="img/layout-slider-thumbs/1.jpg"
+                            alt="layout slider thumb"
+                          />
+                          <span class="layout-slider__thumbs-text">28.3 м² </span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="layout-slider__thumbs-item">
+                          <img
+                            class="layout-slider__thumbs-img"
+                            src="img/layout-slider-thumbs/1.jpg"
+                            alt="layout slider thumb"
+                          />
+                          <span class="layout-slider__thumbs-text">28.3 м² </span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="layout-slider__thumbs-item">
+                          <img
+                            class="layout-slider__thumbs-img"
+                            src="img/layout-slider-thumbs/1.jpg"
+                            alt="layout slider thumb"
+                          />
+                          <span class="layout-slider__thumbs-text">28.3 м² </span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="layout-slider__thumbs-item">
+                          <img
+                            class="layout-slider__thumbs-img"
+                            src="img/layout-slider-thumbs/1.jpg"
+                            alt="layout slider thumb"
+                          />
+                          <span class="layout-slider__thumbs-text">28.3 м² </span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="layout-slider__thumbs-item">
+                          <img
+                            class="layout-slider__thumbs-img"
+                            src="img/layout-slider-thumbs/1.jpg"
+                            alt="layout slider thumb"
+                          />
+                          <span class="layout-slider__thumbs-text">28.3 м² </span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="layout-slider__thumbs-item">
+                          <img
+                            class="layout-slider__thumbs-img"
+                            src="img/layout-slider-thumbs/1.jpg"
+                            alt="layout slider thumb"
+                          />
+                          <span class="layout-slider__thumbs-text">28.3 м² </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="layout-slider__big swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="layout-slider__big-item">
+                        <img
+                          class="layout-slider__big-img"
+                          src="img/layout-slider-big/1.jpg"
+                          alt="layout slider big"
+                        />
+                        <div class="layout-slider__big-bottom">
+                          <div class="layout-slider__big-info">
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Площадь</span>
+                              <span class="layout-slider__big-value">31м<sup>2</sup></span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Этаж</span>
+                              <span class="layout-slider__big-value">4</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Корпус</span>
+                              <span class="layout-slider__big-value">F</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Цена</span>
+                              <span class="layout-slider__big-value">31м</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Тип оттделки</span>
+                              <span class="layout-slider__big-value">Предчистовая</span>
+                            </div>
+                          </div>
+                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                        </div>
+                        <div class="layout-slider__big-item-name">кв-4-31-6</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="layout-slider__big-item">
+                        <img
+                          class="layout-slider__big-img"
+                          src="img/layout-slider-big/1.jpg"
+                          alt="layout slider big"
+                        />
+                        <div class="layout-slider__big-bottom">
+                          <div class="layout-slider__big-info">
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Площадь</span>
+                              <span class="layout-slider__big-value">31м<sup>2</sup></span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Этаж</span>
+                              <span class="layout-slider__big-value">4</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Корпус</span>
+                              <span class="layout-slider__big-value">F</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Цена</span>
+                              <span class="layout-slider__big-value">31м</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Тип оттделки</span>
+                              <span class="layout-slider__big-value">Предчистовая</span>
+                            </div>
+                          </div>
+                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                        </div>
+                        <div class="layout-slider__big-item-name">кв-4-31-6</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="layout-slider__big-item">
+                        <img
+                          class="layout-slider__big-img"
+                          src="img/layout-slider-big/1.jpg"
+                          alt="layout slider big"
+                        />
+                        <div class="layout-slider__big-bottom">
+                          <div class="layout-slider__big-info">
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Площадь</span>
+                              <span class="layout-slider__big-value">31м<sup>2</sup></span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Этаж</span>
+                              <span class="layout-slider__big-value">4</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Корпус</span>
+                              <span class="layout-slider__big-value">F</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Цена</span>
+                              <span class="layout-slider__big-value">31м</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Тип оттделки</span>
+                              <span class="layout-slider__big-value">Предчистовая</span>
+                            </div>
+                          </div>
+                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                        </div>
+                        <div class="layout-slider__big-item-name">кв-4-31-6</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="layout-slider__big-item">
+                        <img
+                          class="layout-slider__big-img"
+                          src="img/layout-slider-big/1.jpg"
+                          alt="layout slider big"
+                        />
+                        <div class="layout-slider__big-bottom">
+                          <div class="layout-slider__big-info">
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Площадь</span>
+                              <span class="layout-slider__big-value">31м<sup>2</sup></span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Этаж</span>
+                              <span class="layout-slider__big-value">4</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Корпус</span>
+                              <span class="layout-slider__big-value">F</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Цена</span>
+                              <span class="layout-slider__big-value">31м</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Тип оттделки</span>
+                              <span class="layout-slider__big-value">Предчистовая</span>
+                            </div>
+                          </div>
+                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                        </div>
+                        <div class="layout-slider__big-item-name">кв-4-31-6</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="layout-slider__big-item">
+                        <img
+                          class="layout-slider__big-img"
+                          src="img/layout-slider-big/1.jpg"
+                          alt="layout slider big"
+                        />
+                        <div class="layout-slider__big-bottom">
+                          <div class="layout-slider__big-info">
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Площадь</span>
+                              <span class="layout-slider__big-value">31м<sup>2</sup></span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Этаж</span>
+                              <span class="layout-slider__big-value">4</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Корпус</span>
+                              <span class="layout-slider__big-value">F</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Цена</span>
+                              <span class="layout-slider__big-value">31м</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Тип оттделки</span>
+                              <span class="layout-slider__big-value">Предчистовая</span>
+                            </div>
+                          </div>
+                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                        </div>
+                        <div class="layout-slider__big-item-name">кв-4-31-6</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="layout-slider__big-item">
+                        <img
+                          class="layout-slider__big-img"
+                          src="img/layout-slider-big/1.jpg"
+                          alt="layout slider big"
+                        />
+                        <div class="layout-slider__big-bottom">
+                          <div class="layout-slider__big-info">
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Площадь</span>
+                              <span class="layout-slider__big-value">31м<sup>2</sup></span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Этаж</span>
+                              <span class="layout-slider__big-value">4</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Корпус</span>
+                              <span class="layout-slider__big-value">F</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Цена</span>
+                              <span class="layout-slider__big-value">31м</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Тип оттделки</span>
+                              <span class="layout-slider__big-value">Предчистовая</span>
+                            </div>
+                          </div>
+                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                        </div>
+                        <div class="layout-slider__big-item-name">кв-4-31-6</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="layout-slider__big-item">
+                        <img
+                          class="layout-slider__big-img"
+                          src="img/layout-slider-big/1.jpg"
+                          alt="layout slider big"
+                        />
+                        <div class="layout-slider__big-bottom">
+                          <div class="layout-slider__big-info">
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Площадь</span>
+                              <span class="layout-slider__big-value">31м<sup>2</sup></span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Этаж</span>
+                              <span class="layout-slider__big-value">4</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Корпус</span>
+                              <span class="layout-slider__big-value">F</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Цена</span>
+                              <span class="layout-slider__big-value">31м</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Тип оттделки</span>
+                              <span class="layout-slider__big-value">Предчистовая</span>
+                            </div>
+                          </div>
+                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                        </div>
+                        <div class="layout-slider__big-item-name">кв-4-31-6</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="layout-slider__big-item">
+                        <img
+                          class="layout-slider__big-img"
+                          src="img/layout-slider-big/1.jpg"
+                          alt="layout slider big"
+                        />
+                        <div class="layout-slider__big-bottom">
+                          <div class="layout-slider__big-info">
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Площадь</span>
+                              <span class="layout-slider__big-value">31м<sup>2</sup></span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Этаж</span>
+                              <span class="layout-slider__big-value">4</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Корпус</span>
+                              <span class="layout-slider__big-value">F</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Цена</span>
+                              <span class="layout-slider__big-value">31м</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Тип оттделки</span>
+                              <span class="layout-slider__big-value">Предчистовая</span>
+                            </div>
+                          </div>
+                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                        </div>
+                        <div class="layout-slider__big-item-name">кв-4-31-6</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="layout-slider__big-item">
+                        <img
+                          class="layout-slider__big-img"
+                          src="img/layout-slider-big/1.jpg"
+                          alt="layout slider big"
+                        />
+                        <div class="layout-slider__big-bottom">
+                          <div class="layout-slider__big-info">
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Площадь</span>
+                              <span class="layout-slider__big-value">31м<sup>2</sup></span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Этаж</span>
+                              <span class="layout-slider__big-value">4</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Корпус</span>
+                              <span class="layout-slider__big-value">F</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Цена</span>
+                              <span class="layout-slider__big-value">31м</span>
+                            </div>
+                            <div class="layout-slider__big-box">
+                              <span class="layout-slider__big-text">Тип оттделки</span>
+                              <span class="layout-slider__big-value">Предчистовая</span>
+                            </div>
+                          </div>
+                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                        </div>
+                        <div class="layout-slider__big-item-name">кв-4-31-6</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="container">
+            <div class="about-inner">
+              <h2 class="about__title title">О проекте</h2>
+              <div class="about__box">
+                <div class="about__box-item">
+                  <p class="about__box-text">
+                    Unit Fututre – это место, где создается экосистема и инфраструктура для развития бизнеса и
+                    комфортной жизни в сфере высоких технологий и креативных индустрий.
+                  </p>
+                  <picture><source srcset="img/about-1.webp" type="image/webp"><img class="about__box-img" src="img/about-1.jpg" alt="about image" /></picture>
+                </div>
+                <div class="about__box-item">
+                  <p class="about__box-text">
+                    Здесь концентрация компаний, стартапов, студентов, специалистов и исследовательских лабораторий
+                    создает условия для того, чтобы бизнесы в пределах парка росли быстрее, чем вне его.
+                  </p>
+                  <picture><source srcset="img/about-2.webp" type="image/webp"><img class="about__box-img" src="img/about-2.jpg" alt="about image" /></picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="info">
+          <div class="container">
+            <div class="info__inner">
+              <div class="info__item">
+                <div class="info__item-content">
+                  <p class="info__item-head">Доступно 1783 парковочных мест</p>
+                  <p class="info__item-text">Скидка 100 000 руб., при покупке паркового места</p>
+                  <a class="info__item-link" href="#">Прейти к парковочным местам</a>
+                </div>
+                <picture><source srcset="img/info/2.webp" type="image/webp"><img class="info__item-img" src="img/info/2.jpg" alt="parking" /></picture>
+              </div>
+              <div class="info__item">
+                <div class="info__item-content">
+                  <p class="info__item-head">Доступно 184 кладовки</p>
+                  <p class="info__item-text">Увеличьте полезную площадь квартиры, приобретя кладовую</p>
+                  <a class="info__item-link" href="#">Прейти к кладовкам</a>
+                </div>
+                <picture><source srcset="img/info/1.webp" type="image/webp"><img class="info__item-img" src="img/info/1.jpg" alt="parking" /></picture>
+              </div>
             </div>
           </div>
         </div>
-        <section class="registration">
+        <section class="details">
           <div class="container">
-            <div class="registration__inner">
-              <div class="registration__content wow animate__animated animate__fadeInUp">
-                <h2 class="registration__content-title title">Замовити консультацію</h2>
-                <p class="registration__content-text">
-                  Щоб замовити консультацію, заповніть форму з права, та ми зв’яжемось з вами найближчим часом!
-                </p>
+            <div class="details__inner">
+              <div class="details__head">
+                <h2 class="details__title title">Особенности Unit Future</h2>
+                <a class="details__link" href="#">Больше про квартал</a>
               </div>
-              <form class="registration__form" id="registration__form" action="#" method="POST">
-                <div class="registration__form-item">
-                  <input
-                    class="registration__form-input userName"
-                    name="userName"
-                    type="text"
-                    placeholder="Ім’я"
-                    autocomplete="off"
-                    required
-                  />
+              <div class="details__body">
+                <div class="details__item details__item--height1">
+                  <picture><source srcset="img/details/1.webp" type="image/webp"><img class="details__item-img" src="img/details/1.jpg" alt="details image" /></picture>
+                  <p class="details__item-text">Подземный паркинг</p>
                 </div>
-                <div class="registration__form-item">
-                  <input
-                    class="registration__form-input userPhone"
-                    name="userPhone"
-                    type="tel"
-                    placeholder="Номер телефону"
-                    autocomplete="off"
-                    required
-                  />
+                <div class="details__item">
+                  <picture><source srcset="img/details/2.webp" type="image/webp"><img class="details__item-img" src="img/details/2.jpg" alt="details image" /></picture>
+                  <p class="details__item-text">Авторская архитектура</p>
                 </div>
-                <button class="registration__form-btn" type="submit">Відправити</button>
+                <div class="details__item details__item--height1">
+                  <picture><source srcset="img/details/3.webp" type="image/webp"><img class="details__item-img" src="img/details/3.jpg" alt="details image" /></picture>
+                  <p class="details__item-text">Конференц-залы</p>
+                </div>
+                <div class="details__item">
+                  <picture><source srcset="img/details/4.webp" type="image/webp"><img class="details__item-img" src="img/details/4.jpg" alt="details image" /></picture>
+                  <p class="details__item-text">IT-университет</p>
+                </div>
+                <div class="details__item details__item--height2">
+                  <picture><source srcset="img/details/5.webp" type="image/webp"><img class="details__item-img" src="img/details/5.jpg" alt="details image" /></picture>
+                  <p class="details__item-text">IT-школа</p>
+                </div>
+                <div class="details__item details__item--height2">
+                  <picture><source srcset="img/details/7.webp" type="image/webp"><img class="details__item-img" src="img/details/7.jpg" alt="details image" /></picture>
+                  <p class="details__item-text">Амфитеатр</p>
+                </div>
+                <div class="details__item details__item--height3">
+                  <picture><source srcset="img/details/6.webp" type="image/webp"><img class="details__item-img" src="img/details/6.jpg" alt="details image" /></picture>
+                  <p class="details__item-text">Современные офисы</p>
+                </div>
+                <div class="details__item details__item--height3">
+                  <picture><source srcset="img/details/8.webp" type="image/webp"><img class="details__item-img" src="img/details/8.jpg" alt="details image" /></picture>
+                  <p class="details__item-text">Стадион</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="info">
+          <div class="container">
+            <div class="info__inner">
+              <div class="info__item">
+                <div class="info__item-content">
+                  <p class="info__item-head">Доступно 1783 парковочных мест</p>
+                  <p class="info__item-text">Скидка 100 000 руб., при покупке паркового места</p>
+                  <a class="info__item-link" href="#">Прейти к парковочным местам</a>
+                </div>
+                <picture><source srcset="img/info/3.webp" type="image/webp"><img class="info__item-img" src="img/info/3.jpg" alt="parking" /></picture>
+              </div>
+              <div class="info__item">
+                <div class="info__item-content">
+                  <p class="info__item-head">Доступно 184 кладовки</p>
+                  <p class="info__item-text">Увеличьте полезную площадь квартиры, приобретя кладовую</p>
+                  <a class="info__item-link" href="#">Прейти к кладовкам</a>
+                </div>
+                <picture><source srcset="img/info/4.webp" type="image/webp"><img class="info__item-img" src="img/info/4.jpg" alt="parking" /></picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="build">
+          <div class="container">
+            <div class="build__inner">
+              <div class="build__head">
+                <h2 class="build__title title">Ход строительства</h2>
+                <div class="build__selects">
+                  <select class="js-choice" name="cor">
+                    <option value="">Корпус A</option>
+                    <option value="">Корпус B</option>
+                    <option value="">Корпус C</option>
+                  </select>
+                  <select class="js-choice" name="year">
+                    <option value="">2022</option>
+                    <option value="">2021</option>
+                    <option value="">2020</option>
+                  </select>
+                </div>
+              </div>
+              <div class="build__body">
+                <a class="build__link" href="#">
+                  <picture><source srcset="img/build/1.webp" type="image/webp"><img class="build__link-img" src="img/build/1.jpg" alt=""></picture>
+                  <span class="build__link-text">Июль 2022</span>
+                  <span class="build__link-info">36 фотографий</span>
+                </a>
+                <a class="build__link" href="#">
+                  <picture><source srcset="img/build/2.webp" type="image/webp"><img class="build__link-img" src="img/build/2.jpg" alt=""></picture>
+                  <span class="build__link-text">Сентябрь 2022</span>
+                  <span class="build__link-info">45 фотографий</span>
+                </a>
+                <a class="build__link" href="#">
+                  <picture><source srcset="img/build/3.webp" type="image/webp"><img class="build__link-img" src="img/build/3.jpg" alt=""></picture>
+                  <span class="build__link-text">Октябрь 2022</span>
+                  <span class="build__link-info">21 фотографий</span>
+                </a>
+                <a class="build__link" href="#">
+                  <picture><source srcset="img/build/4.webp" type="image/webp"><img class="build__link-img" src="img/build/4.jpg" alt=""></picture>
+                  <span class="build__link-text">Ноябрь 2022</span>
+                  <span class="build__link-info">32 фотографий</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="connect">
+          <div class="container">
+            <div class="connect__inner">
+              <form class="connect__form">
+                <h2 class="connect__title title">Записаться на просмотр</h2>
+                <input class="connect__form-input" type="text" placeholder="Ваше имя">
+                <input class="connect__form-input" type="tel" placeholder="Ваш телефон">
+                <button class="connect__form-btn btn" type="submit">Записаться</button>
               </form>
             </div>
           </div>
         </section>
-        <div class="up-btn"></div>
       </main>
       <footer class="footer">
   <div class="container">
     <div class="footer__inner">
-      <a class="logo" href="index.html">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <path
-            d="M1.8 1.8H22C26.5287 1.8 30.2 5.47127 30.2 10V30.2H10C5.47127 30.2 1.8 26.5287 1.8 22V1.8Z"
-            fill="transparent"
-            stroke="#0285FF"
-            stroke-width="3.6"
-          />
-        </svg>
-        Сходи УЖ
-      </a>
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="index.html">Головна</a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="upstairs.html">Сходи</a>
-        </li>
-        <li class="footer__list-item">
-          <a class="footer__list-link" href="doors.html">Двері</a>
-        </li>
-      </ul>
-      <div class="footer__contacts">
-        <div class="footer__phone">
-          <a class="phone" href="tel:+380503724206">+380503724206</a>
-          <a class="button" href="#">Замовити консультацію</a>
-        </div>
+      <div class="footer__item">
+        <a class="footer__item-logo logo" href="index.html">
+          <img class="logo__img" src="img/icons/logo.svg" alt="logo" />
+        </a>
+        <p class="footer__item-text">
+          Вся размещенная информация носит исключительно ознакомительный характер и ни при каких условиях не является
+          публичной офертой.
+        </p>
+      </div>
+      <div class="footer__item">
+        <h5 class="footer__item-title">Информация</h5>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Главная</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Коммерция</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Генплан</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Галерея</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">О проекте</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Паркинг</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Кладовые</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <h5 class="footer__item-title">Квартиры</h5>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Студии</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Однокомнатные</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Двухкомнатные</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Трёхкомнатные</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Четырёхкомнвтные</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <h5 class="footer__item-title">Способы оплаты</h5>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Ипотека</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Полная оплата</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Рассрочка</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="#">Онлайн покупка</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <h5 class="footer__item-title">Контактная информация</h5>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="tel:08003342233">0800 334 22 33</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__list-link" href="mailto:unitfuture@gmail.com">unitfuture@gmail.com</a>
+          </li>
+          <li class="footer__list-item">
+            <span class="footer__list-link" href="#">Киев, ул. Шевченко 18/5</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </footer>
 
-      <script src="js/app.min.js?_v=20230228203746"></script>
+      <script src="js/app.min.js?_v=20230304211432"></script>
     </div>
   </body>
 </html>
