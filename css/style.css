@@ -1308,6 +1308,54 @@ body {
   background-color: #1e1e1e;
 }
 
+input::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+input::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+input:-moz-placeholder {
+  opacity: 1;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+input:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+input:focus:-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+input:focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
 .container {
   max-width: 1430px;
   margin: 0 auto;
@@ -1814,6 +1862,12 @@ body {
   line-height: 1.25;
 }
 
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .banner__inner {
   position: relative;
 }
@@ -1995,6 +2049,10 @@ body {
   border: 1px solid #39393c;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.layout__item-head.open {
+  background: #767BFF;
 }
 
 .layout__plan-link {
