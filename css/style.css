@@ -1289,6 +1289,10 @@ Build date: 2019-12-19 16:51:02
   font-size: 11px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
