@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230304211432" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230307161735" />
   </head>
   <body>
     <div class="wrapper">
@@ -24,7 +24,13 @@
           <span class="header__adress-street">Улица Шевченко 18/5</span>
           <span class="header__adress-city">Город Киев</span>
         </div>
-        <button class="header__btn btn">Записаться на осмотр</button>
+        <a class="header__btn btn" data-da=".header__menu,767,last" href="#">Записаться на осмотр</a>
+        <button class="menu-btn">
+          <div class="menu-btn__inner">
+            <span></span>
+            <span></span>
+          </div>
+        </button>
       </div>
       <div class="header__bottom">
         <nav class="nav">
@@ -52,10 +58,12 @@
             </li>
           </ul>
         </nav>
-        <select class="header__language js-choice" name="language">
-          <option value="ukrain">Украинский</option>
-          <option value="russian" selected>Русский</option>
-        </select>
+        <form class="header__form">
+          <select class="header__language js-choice" name="language">
+            <option value="ukrain">Украинский</option>
+            <option value="russian" selected>Русский</option>
+          </select>
+        </form>
       </div>
     </div>
   </div>
@@ -69,29 +77,68 @@
                 <div class="swiper-wrapper">
                   <div class="banner__slider-item swiper-slide">
                     <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <div class="banner__box">
+                      <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
+                      <p class="banner__box-text">
+                        Место, где создается экосистема и инфраструктура для развития бизнеса
+                      </p>
+                      <a class="banner__box-btn btn" href="#" data-da=".banner__inner,450,last"
+                        >Записаться на просмотр</a
+                      >
+                    </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
                     <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <div class="banner__box">
+                      <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
+                      <p class="banner__box-text">
+                        Место, где создается экосистема и инфраструктура для развития бизнеса
+                      </p>
+                      <a class="banner__box-btn btn" href="#">Записаться на просмотр</a>
+                    </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
                     <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <div class="banner__box">
+                      <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
+                      <p class="banner__box-text">
+                        Место, где создается экосистема и инфраструктура для развития бизнеса
+                      </p>
+                      <a class="banner__box-btn btn" href="#">Записаться на просмотр</a>
+                    </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
                     <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <div class="banner__box">
+                      <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
+                      <p class="banner__box-text">
+                        Место, где создается экосистема и инфраструктура для развития бизнеса
+                      </p>
+                      <a class="banner__box-btn btn" href="#">Записаться на просмотр</a>
+                    </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
                     <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <div class="banner__box">
+                      <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
+                      <p class="banner__box-text">
+                        Место, где создается экосистема и инфраструктура для развития бизнеса
+                      </p>
+                      <a class="banner__box-btn btn" href="#">Записаться на просмотр</a>
+                    </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
                     <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <div class="banner__box">
+                      <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
+                      <p class="banner__box-text">
+                        Место, где создается экосистема и инфраструктура для развития бизнеса
+                      </p>
+                      <a class="banner__box-btn btn" href="#">Записаться на просмотр</a>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
-              </div>
-              <div class="banner__box">
-                <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
-                <p class="banner__box-text">Место, где создается экосистема и инфраструктура для развития бизнеса</p>
-                <button class="banner__box-btn btn">Записаться на просмотр</button>
               </div>
             </div>
           </div>
@@ -127,52 +174,58 @@
                 <div class="filters__item filter-price">
                   <form class="filter__item-form">
                     <h6 class="filters__item-title">Цена в рублях</h6>
-                    <div class="filters__item-value">
-                      от <span class="price__from"></span> - до <span class="price__to"></span>
+                    <div class="filters__item-body">
+                      <div class="filters__item-value">
+                        от <span class="price__from"></span> - до <span class="price__to"></span>
+                      </div>
+                      <input
+                        class="range-price"
+                        type="range"
+                        data-type="double"
+                        data-from="2000000"
+                        data-to="4000000"
+                        data-min="1500000"
+                        data-max="5000000"
+                      />
                     </div>
-                    <input
-                      class="range-price"
-                      type="range"
-                      data-type="double"
-                      data-from="2000000"
-                      data-to="4000000"
-                      data-min="1500000"
-                      data-max="5000000"
-                    />
                   </form>
                 </div>
                 <div class="filters__item filter-square">
                   <form class="filter__item-form">
                     <h6 class="filters__item-title">Площадь м<sup>2</sup></h6>
-                    <div class="filters__item-value">
-                      от <span class="square__from"></span> - до <span class="square__to"></span>
+                    <div class="filters__item-body">
+                      <div class="filters__item-value">
+                        от <span class="square__from"></span> - до <span class="square__to"></span>
+                      </div>
+                      <input
+                        class="range-square"
+                        type="range"
+                        data-type="double"
+                        data-from="34.2"
+                        data-to="51.9"
+                        data-min="19.2"
+                        data-max="105.6"
+                      />
                     </div>
-                    <input
-                      class="range-square"
-                      type="range"
-                      data-type="double"
-                      data-from="34.2"
-                      data-to="51.9"
-                      data-min="19.2"
-                      data-max="105.6"
-                    />
                   </form>
                 </div>
                 <div class="filters__item filter-floor">
                   <form class="filter__item-form">
                     <h6 class="filters__item-title">Этаж</h6>
-                    <div class="filters__item-value">
-                      от <span class="floor__from"></span> - до <span class="floor__to"></span>
+                    <div class="filters__item-body">
+                      <div class="filters__item-value">
+                        от <span class="floor__from"></span> - до <span class="floor__to"></span>
+                      </div>
+                      <input
+                        class="range-floor"
+                        type="range"
+                        data-type="double"
+                        data-from="2"
+                        data-to="9"
+                        data-min="1"
+                        data-max="25"
+                      />
                     </div>
-                    <input
-                      class="range-floor"
-                      type="range"
-                      data-type="double"
-                      data-from="2"
-                      data-to="9"
-                      data-min="1"
-                      data-max="25"
-                    />
                   </form>
                 </div>
               </div>
@@ -681,7 +734,7 @@
               <h2 class="layout-slider__title title">Выбор планировки</h2>
               <div class="layout-slider__box">
                 <div class="layout-slider__thumbs-box">
-                  <div class="filters">
+                  <div class="filters" data-da=".layout-slider__inner,950,1">
                     <div class="filters__item filter-rooms">
                       <form class="filters__item-form">
                         <div class="filter-rooms__labels">
@@ -833,7 +886,7 @@
                               <span class="layout-slider__big-value">Предчистовая</span>
                             </div>
                           </div>
-                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                          <a class="layout-slider__big-btn btn" href="#">Забронировать</a>
                         </div>
                         <div class="layout-slider__big-item-name">кв-4-31-6</div>
                       </div>
@@ -868,7 +921,7 @@
                               <span class="layout-slider__big-value">Предчистовая</span>
                             </div>
                           </div>
-                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                          <a class="layout-slider__big-btn btn" href="#">Забронировать</a>
                         </div>
                         <div class="layout-slider__big-item-name">кв-4-31-6</div>
                       </div>
@@ -903,7 +956,7 @@
                               <span class="layout-slider__big-value">Предчистовая</span>
                             </div>
                           </div>
-                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                          <a class="layout-slider__big-btn btn" href="#">Забронировать</a>
                         </div>
                         <div class="layout-slider__big-item-name">кв-4-31-6</div>
                       </div>
@@ -938,7 +991,7 @@
                               <span class="layout-slider__big-value">Предчистовая</span>
                             </div>
                           </div>
-                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                          <a class="layout-slider__big-btn btn" href="#">Забронировать</a>
                         </div>
                         <div class="layout-slider__big-item-name">кв-4-31-6</div>
                       </div>
@@ -973,7 +1026,7 @@
                               <span class="layout-slider__big-value">Предчистовая</span>
                             </div>
                           </div>
-                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                          <a class="layout-slider__big-btn btn" href="#">Забронировать</a>
                         </div>
                         <div class="layout-slider__big-item-name">кв-4-31-6</div>
                       </div>
@@ -1008,7 +1061,7 @@
                               <span class="layout-slider__big-value">Предчистовая</span>
                             </div>
                           </div>
-                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                          <a class="layout-slider__big-btn btn" href="#">Забронировать</a>
                         </div>
                         <div class="layout-slider__big-item-name">кв-4-31-6</div>
                       </div>
@@ -1043,7 +1096,7 @@
                               <span class="layout-slider__big-value">Предчистовая</span>
                             </div>
                           </div>
-                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                          <a class="layout-slider__big-btn btn" href="#">Забронировать</a>
                         </div>
                         <div class="layout-slider__big-item-name">кв-4-31-6</div>
                       </div>
@@ -1078,7 +1131,7 @@
                               <span class="layout-slider__big-value">Предчистовая</span>
                             </div>
                           </div>
-                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                          <a class="layout-slider__big-btn btn" href="#">Забронировать</a>
                         </div>
                         <div class="layout-slider__big-item-name">кв-4-31-6</div>
                       </div>
@@ -1113,7 +1166,7 @@
                               <span class="layout-slider__big-value">Предчистовая</span>
                             </div>
                           </div>
-                          <button class="layout-slider__big-btn btn">Забронировать</button>
+                          <a class="layout-slider__big-btn btn" href="#">Забронировать</a>
                         </div>
                         <div class="layout-slider__big-item-name">кв-4-31-6</div>
                       </div>
@@ -1154,20 +1207,24 @@
           <div class="container">
             <div class="info__inner">
               <div class="info__item">
-                <div class="info__item-content">
+                <div class="info__item-content info__item-content--parking">
                   <p class="info__item-head">Доступно 1783 парковочных мест</p>
                   <p class="info__item-text">Скидка 100 000 руб., при покупке паркового места</p>
                   <a class="info__item-link" href="#">Прейти к парковочным местам</a>
                 </div>
-                <picture><source srcset="img/info/2.webp" type="image/webp"><img class="info__item-img" src="img/info/2.jpg" alt="parking" /></picture>
+                <div class="info__item-img">
+                  <picture><source srcset="img/info/2.webp" type="image/webp"><img src="img/info/2.jpg" alt="parking" /></picture>
+                </div>
               </div>
               <div class="info__item">
-                <div class="info__item-content">
+                <div class="info__item-content info__item-content--pantry">
                   <p class="info__item-head">Доступно 184 кладовки</p>
                   <p class="info__item-text">Увеличьте полезную площадь квартиры, приобретя кладовую</p>
                   <a class="info__item-link" href="#">Прейти к кладовкам</a>
                 </div>
-                <picture><source srcset="img/info/1.webp" type="image/webp"><img class="info__item-img" src="img/info/1.jpg" alt="parking" /></picture>
+                <div class="info__item-img">
+                  <picture><source srcset="img/info/1.webp" type="image/webp"><img src="img/info/1.jpg" alt="pantry" /></picture>
+                </div>
               </div>
             </div>
           </div>
@@ -1179,39 +1236,58 @@
                 <h2 class="details__title title">Особенности Unit Future</h2>
                 <a class="details__link" href="#">Больше про квартал</a>
               </div>
-              <div class="details__body">
-                <div class="details__item details__item--height1">
-                  <picture><source srcset="img/details/1.webp" type="image/webp"><img class="details__item-img" src="img/details/1.jpg" alt="details image" /></picture>
-                  <p class="details__item-text">Подземный паркинг</p>
+              <div class="details-slider swiper" data-mobile="false">
+                <div class="details__body swiper-wrapper">
+                  <div class="details__item details__item--height1 swiper-slide">
+                    <div class="details__item-img">
+                      <picture><source srcset="img/details/1.webp" type="image/webp"><img src="img/details/1.jpg" alt="details image" /></picture>
+                    </div>
+                    <p class="details__item-text">Подземный паркинг</p>
+                  </div>
+                  <div class="details__item details__item--height2 swiper-slide">
+                    <div class="details__item-img">
+                      <picture><source srcset="img/details/5.webp" type="image/webp"><img src="img/details/5.jpg" alt="details image" /></picture>
+                    </div>
+                    <p class="details__item-text">IT-школа</p>
+                  </div>
+                  <div class="details__item swiper-slide">
+                    <div class="details__item-img">
+                      <picture><source srcset="img/details/2.webp" type="image/webp"><img src="img/details/2.jpg" alt="details image" /></picture>
+                    </div>
+                    <p class="details__item-text">Авторская архитектура</p>
+                  </div>
+                  <div class="details__item details__item--height3 swiper-slide">
+                    <div class="details__item-img">
+                      <picture><source srcset="img/details/6.webp" type="image/webp"><img src="img/details/6.jpg" alt="details image" /></picture>
+                    </div>
+                    <p class="details__item-text">Амфитеатр</p>
+                  </div>
+                  <div class="details__item details__item--height1 swiper-slide">
+                    <div class="details__item-img">
+                      <picture><source srcset="img/details/3.webp" type="image/webp"><img src="img/details/3.jpg" alt="details image" /></picture>
+                    </div>
+                    <p class="details__item-text">Конференц-залы</p>
+                  </div>
+                  <div class="details__item details__item--height2 swiper-slide">
+                    <div class="details__item-img">
+                      <picture><source srcset="img/details/7.webp" type="image/webp"><img src="img/details/7.jpg" alt="details image" /></picture>
+                    </div>
+                    <p class="details__item-text">Современные офисы</p>
+                  </div>
+                  <div class="details__item swiper-slide">
+                    <div class="details__item-img">
+                      <picture><source srcset="img/details/4.webp" type="image/webp"><img src="img/details/4.jpg" alt="details image" /></picture>
+                    </div>
+                    <p class="details__item-text">IT - университет</p>
+                  </div>
+                  <div class="details__item details__item--height3 swiper-slide">
+                    <div class="details__item-img">
+                      <picture><source srcset="img/details/8.webp" type="image/webp"><img src="img/details/8.jpg" alt="details image" /></picture>
+                    </div>
+                    <p class="details__item-text">Стадион</p>
+                  </div>
                 </div>
-                <div class="details__item">
-                  <picture><source srcset="img/details/2.webp" type="image/webp"><img class="details__item-img" src="img/details/2.jpg" alt="details image" /></picture>
-                  <p class="details__item-text">Авторская архитектура</p>
-                </div>
-                <div class="details__item details__item--height1">
-                  <picture><source srcset="img/details/3.webp" type="image/webp"><img class="details__item-img" src="img/details/3.jpg" alt="details image" /></picture>
-                  <p class="details__item-text">Конференц-залы</p>
-                </div>
-                <div class="details__item">
-                  <picture><source srcset="img/details/4.webp" type="image/webp"><img class="details__item-img" src="img/details/4.jpg" alt="details image" /></picture>
-                  <p class="details__item-text">IT-университет</p>
-                </div>
-                <div class="details__item details__item--height2">
-                  <picture><source srcset="img/details/5.webp" type="image/webp"><img class="details__item-img" src="img/details/5.jpg" alt="details image" /></picture>
-                  <p class="details__item-text">IT-школа</p>
-                </div>
-                <div class="details__item details__item--height2">
-                  <picture><source srcset="img/details/7.webp" type="image/webp"><img class="details__item-img" src="img/details/7.jpg" alt="details image" /></picture>
-                  <p class="details__item-text">Амфитеатр</p>
-                </div>
-                <div class="details__item details__item--height3">
-                  <picture><source srcset="img/details/6.webp" type="image/webp"><img class="details__item-img" src="img/details/6.jpg" alt="details image" /></picture>
-                  <p class="details__item-text">Современные офисы</p>
-                </div>
-                <div class="details__item details__item--height3">
-                  <picture><source srcset="img/details/8.webp" type="image/webp"><img class="details__item-img" src="img/details/8.jpg" alt="details image" /></picture>
-                  <p class="details__item-text">Стадион</p>
-                </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
@@ -1220,20 +1296,24 @@
           <div class="container">
             <div class="info__inner">
               <div class="info__item">
-                <div class="info__item-content">
-                  <p class="info__item-head">Доступно 1783 парковочных мест</p>
-                  <p class="info__item-text">Скидка 100 000 руб., при покупке паркового места</p>
-                  <a class="info__item-link" href="#">Прейти к парковочным местам</a>
+                <div class="info__item-content info__item-content--1">
+                  <p class="info__item-head">Доступно 2384 квартиры</p>
+                  <p class="info__item-text">Купить квартиру в ипотеку под самый выгодный процент</p>
+                  <a class="info__item-link" href="#">Прейти к квартирам</a>
                 </div>
-                <picture><source srcset="img/info/3.webp" type="image/webp"><img class="info__item-img" src="img/info/3.jpg" alt="parking" /></picture>
+                <div class="info__item-img">
+                  <picture><source srcset="img/info/3.webp" type="image/webp"><img src="img/info/3.jpg" alt="parking" /></picture>
+                </div>
               </div>
               <div class="info__item">
-                <div class="info__item-content">
-                  <p class="info__item-head">Доступно 184 кладовки</p>
-                  <p class="info__item-text">Увеличьте полезную площадь квартиры, приобретя кладовую</p>
-                  <a class="info__item-link" href="#">Прейти к кладовкам</a>
+                <div class="info__item-content info__item-content--2">
+                  <p class="info__item-head">Доступно 2384 квартиры</p>
+                  <p class="info__item-text">Внесите полную оплату и получите скидку</p>
+                  <a class="info__item-link" href="#">Прейти к квартирам</a>
                 </div>
-                <picture><source srcset="img/info/4.webp" type="image/webp"><img class="info__item-img" src="img/info/4.jpg" alt="parking" /></picture>
+                <div class="info__item-img">
+                  <picture><source srcset="img/info/4.webp" type="image/webp"><img src="img/info/4.jpg" alt="pantry" /></picture>
+                </div>
               </div>
             </div>
           </div>
@@ -1243,7 +1323,7 @@
             <div class="build__inner">
               <div class="build__head">
                 <h2 class="build__title title">Ход строительства</h2>
-                <div class="build__selects">
+                <form class="build__selects">
                   <select class="js-choice" name="cor">
                     <option value="">Корпус A</option>
                     <option value="">Корпус B</option>
@@ -1254,45 +1334,49 @@
                     <option value="">2021</option>
                     <option value="">2020</option>
                   </select>
-                </div>
+                </form>
               </div>
-              <div class="build__body">
-                <a class="build__link" href="#">
-                  <picture><source srcset="img/build/1.webp" type="image/webp"><img class="build__link-img" src="img/build/1.jpg" alt=""></picture>
-                  <span class="build__link-text">Июль 2022</span>
-                  <span class="build__link-info">36 фотографий</span>
-                </a>
-                <a class="build__link" href="#">
-                  <picture><source srcset="img/build/2.webp" type="image/webp"><img class="build__link-img" src="img/build/2.jpg" alt=""></picture>
-                  <span class="build__link-text">Сентябрь 2022</span>
-                  <span class="build__link-info">45 фотографий</span>
-                </a>
-                <a class="build__link" href="#">
-                  <picture><source srcset="img/build/3.webp" type="image/webp"><img class="build__link-img" src="img/build/3.jpg" alt=""></picture>
-                  <span class="build__link-text">Октябрь 2022</span>
-                  <span class="build__link-info">21 фотографий</span>
-                </a>
-                <a class="build__link" href="#">
-                  <picture><source srcset="img/build/4.webp" type="image/webp"><img class="build__link-img" src="img/build/4.jpg" alt=""></picture>
-                  <span class="build__link-text">Ноябрь 2022</span>
-                  <span class="build__link-info">32 фотографий</span>
-                </a>
+              <div class="build__slider swiper" data-mobile="false">
+                <div class="build__body swiper-wrapper">
+                  <a class="build__link swiper-slide" href="#">
+                    <picture><source srcset="img/build/1.webp" type="image/webp"><img class="build__link-img" src="img/build/1.jpg" alt="" /></picture>
+                    <span class="build__link-text">Июль 2022</span>
+                    <span class="build__link-info">36 фотографий</span>
+                  </a>
+                  <a class="build__link swiper-slide" href="#">
+                    <picture><source srcset="img/build/2.webp" type="image/webp"><img class="build__link-img" src="img/build/2.jpg" alt="" /></picture>
+                    <span class="build__link-text">Сентябрь 2022</span>
+                    <span class="build__link-info">45 фотографий</span>
+                  </a>
+                  <a class="build__link swiper-slide" href="#">
+                    <picture><source srcset="img/build/3.webp" type="image/webp"><img class="build__link-img" src="img/build/3.jpg" alt="" /></picture>
+                    <span class="build__link-text">Октябрь 2022</span>
+                    <span class="build__link-info">21 фотографий</span>
+                  </a>
+                  <a class="build__link swiper-slide" href="#">
+                    <picture><source srcset="img/build/4.webp" type="image/webp"><img class="build__link-img" src="img/build/4.jpg" alt="" /></picture>
+                    <span class="build__link-text">Ноябрь 2022</span>
+                    <span class="build__link-info">32 фотографий</span>
+                  </a>
+                </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
         </section>
-        <section class="connect">
+       <section class="connect">
           <div class="container">
             <div class="connect__inner">
               <form class="connect__form">
                 <h2 class="connect__title title">Записаться на просмотр</h2>
-                <input class="connect__form-input" type="text" placeholder="Ваше имя">
-                <input class="connect__form-input" type="tel" placeholder="Ваш телефон">
+                <input class="connect__form-input" type="text" placeholder="Ваше имя" />
+                <input class="connect__form-input" type="tel" placeholder="Ваш телефон" />
                 <button class="connect__form-btn btn" type="submit">Записаться</button>
               </form>
             </div>
           </div>
         </section>
+       
       </main>
       <footer class="footer">
   <div class="container">
@@ -1387,7 +1471,7 @@
   </div>
 </footer>
 
-      <script src="js/app.min.js?_v=20230304211432"></script>
+      <script src="js/app.min.js?_v=20230307161735"></script>
     </div>
   </body>
 </html>
