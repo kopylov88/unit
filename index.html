@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230308122706" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230309014540" />
   </head>
   <body>
     <div class="wrapper">
@@ -24,7 +24,7 @@
           <span class="header__adress-street">Улица Шевченко 18/5</span>
           <span class="header__adress-city">Город Киев</span>
         </div>
-        <a class="header__btn btn" data-da=".header__menu,767,last" href="#">Записаться на осмотр</a>
+        <a class="header__btn btn" href="#">Записаться на осмотр</a>
         <button class="menu-btn">
           <span></span>
           <span></span>
@@ -56,12 +56,13 @@
             </li>
           </ul>
         </nav>
-        <form class="header__form" data-da=".header__menu,767,last">
+        <form class="header__form">
           <select class="header__language js-choice" name="language">
             <option value="ukrain">Украинский</option>
             <option value="russian" selected>Русский</option>
           </select>
         </form>
+        <a class="header__btn header__btn--mobile btn" href="#">Записаться на просмотр</a>
       </div>
     </div>
   </div>
@@ -74,7 +75,11 @@
               <div class="banner__slider swiper">
                 <div class="swiper-wrapper">
                   <div class="banner__slider-item swiper-slide">
-                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <picture>
+                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
+                      <source srcset="img/banner-slide.webp" type="image/webp" />
+                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
+                    </picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -86,7 +91,11 @@
                     </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
-                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <picture>
+                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
+                      <source srcset="img/banner-slide.webp" type="image/webp" />
+                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
+                    </picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -96,7 +105,11 @@
                     </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
-                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <picture>
+                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
+                      <source srcset="img/banner-slide.webp" type="image/webp" />
+                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
+                    </picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -106,7 +119,11 @@
                     </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
-                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <picture>
+                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
+                      <source srcset="img/banner-slide.webp" type="image/webp" />
+                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
+                    </picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -116,7 +133,11 @@
                     </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
-                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <picture>
+                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
+                      <source srcset="img/banner-slide.webp" type="image/webp" />
+                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
+                    </picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -126,7 +147,11 @@
                     </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
-                    <picture><source srcset="img/banner-slide.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" /></picture>
+                    <picture>
+                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
+                      <source srcset="img/banner-slide.webp" type="image/webp" />
+                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
+                    </picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -1186,7 +1211,7 @@
                 <div class="about__box-item">
                   <p class="about__box-text">
                     Unit Fututre – это место, где создается экосистема и инфраструктура для развития бизнеса и
-                    комфортной жизни в сфере высоких технологий и креативных индустрий.
+                    комфортной жизни в сфере в ысоких технологий и креативных индустрий.
                   </p>
                   <picture><source srcset="img/about-1.webp" type="image/webp"><img class="about__box-img" src="img/about-1.jpg" alt="about image" /></picture>
                 </div>
@@ -1334,7 +1359,7 @@
                   </select>
                 </form>
               </div>
-              <div class="build__slider swiper" data-mobile="false">
+              <div class="build__slider swiper" data-mobile="false"> 
                 <div class="build__body swiper-wrapper">
                   <a class="build__link swiper-slide" href="#">
                     <picture><source srcset="img/build/1.webp" type="image/webp"><img class="build__link-img" src="img/build/1.jpg" alt="" /></picture>
@@ -1362,7 +1387,7 @@
             </div>
           </div>
         </section>
-       <section class="connect" id="contacts">
+        <section class="connect" id="contacts">
           <div class="container">
             <div class="connect__inner">
               <form class="connect__form">
@@ -1374,12 +1399,11 @@
             </div>
           </div>
         </section>
-       
       </main>
       <footer class="footer">
   <div class="container">
     <div class="footer__inner">
-      <div class="footer__item">
+      <div class="footer__item footer__item--logo">
         <a class="footer__item-logo logo" href="index.html">
           <img class="logo__img" src="img/icons/logo.svg" alt="logo" />
         </a>
@@ -1493,7 +1517,7 @@
   </div>
 </footer>
 
-      <script src="js/app.min.js?_v=20230308122706"></script>
+      <script src="js/app.min.js?_v=20230309014540"></script>
     </div>
   </body>
 </html>
