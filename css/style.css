@@ -3147,7 +3147,7 @@ input:focus:-ms-input-placeholder {
     height: calc(100vh - 70px);
     transition: 0.3s;
     transform: translateX(-200%);
-    background-color: #1e1e1e;
+    background: linear-gradient(114.28deg, #252627 3.98%, #2F2F33 122.75%);
   }
 
   .header__menu.open {
