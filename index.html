@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230309014540" />
+    <title>Unit Future Development</title>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230309145221" />
   </head>
   <body>
     <div class="wrapper">
@@ -34,7 +34,7 @@
         <nav class="nav">
           <ul class="header__menu">
             <li class="header__menu-item">
-              <a class="header__menu-link header__menu-link--active" href="#">Главная</a>
+              <a class="header__menu-link" href="#">Главная</a>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="#">Квартиры</a>
@@ -76,25 +76,9 @@
                 <div class="swiper-wrapper">
                   <div class="banner__slider-item swiper-slide">
                     <picture>
-                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
-                      <source srcset="img/banner-slide.webp" type="image/webp" />
-                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
-                    </picture>
-                    <div class="banner__box">
-                      <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
-                      <p class="banner__box-text">
-                        Место, где создается экосистема и инфраструктура для развития бизнеса
-                      </p>
-                      <a class="banner__box-btn btn" href="#" data-da=".banner__inner,450,last"
-                        >Записаться на просмотр</a
-                      >
-                    </div>
-                  </div>
-                  <div class="banner__slider-item swiper-slide">
-                    <picture>
-                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
-                      <source srcset="img/banner-slide.webp" type="image/webp" />
-                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
+                      <source srcset="img/banner-slider/1-mini.jpg" media="(max-width: 375px)" />
+                      <source srcset="img/banner-slider/1.webp" type="image/webp" />
+                      <img class="banner__slider-img" src="img/banner-slider/1.jpg" alt="slider image" />
                     </picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
@@ -105,11 +89,7 @@
                     </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
-                    <picture>
-                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
-                      <source srcset="img/banner-slide.webp" type="image/webp" />
-                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
-                    </picture>
+                    <picture><source srcset="img/banner-slider/2.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slider/2.jpg" alt="slider image" /></picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -119,11 +99,7 @@
                     </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
-                    <picture>
-                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
-                      <source srcset="img/banner-slide.webp" type="image/webp" />
-                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
-                    </picture>
+                    <picture><source srcset="img/banner-slider/3.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slider/3.jpg" alt="slider image" /></picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -133,11 +109,7 @@
                     </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
-                    <picture>
-                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
-                      <source srcset="img/banner-slide.webp" type="image/webp" />
-                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
-                    </picture>
+                    <picture><source srcset="img/banner-slider/4.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slider/4.jpg" alt="slider image" /></picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -147,11 +119,7 @@
                     </div>
                   </div>
                   <div class="banner__slider-item swiper-slide">
-                    <picture>
-                      <source srcset="img/banner-slide-mini.jpg" media="(max-width: 375px)" />
-                      <source srcset="img/banner-slide.webp" type="image/webp" />
-                      <img class="banner__slider-img" src="img/banner-slide.jpg" alt="slider image" />
-                    </picture>
+                    <picture><source srcset="img/banner-slider/5.webp" type="image/webp"><img class="banner__slider-img" src="img/banner-slider/5.jpg" alt="slider image" /></picture>
                     <div class="banner__box">
                       <h1 class="banner__box-title">Жилье в инновационном квартале</h1>
                       <p class="banner__box-text">
@@ -161,8 +129,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-pagination"></div>
               </div>
+              <a class="banner__box-btn banner__box-btn--mobile btn" href="#">Записаться на просмотр</a>
             </div>
           </div>
         </section>
@@ -757,7 +725,7 @@
               <h2 class="layout-slider__title title">Выбор планировки</h2>
               <div class="layout-slider__box">
                 <div class="layout-slider__thumbs-box">
-                  <div class="filters" data-da=".layout-slider__inner,950,1">
+                  <div class="filters">
                     <div class="filters__item filter-rooms">
                       <form class="filters__item-form">
                         <div class="filter-rooms__labels">
@@ -1208,14 +1176,14 @@
             <div class="about-inner">
               <h2 class="about__title title">О проекте</h2>
               <div class="about__box">
-                <div class="about__box-item">
+                <div class="about__box-item about__box-item--left">
                   <p class="about__box-text">
                     Unit Fututre – это место, где создается экосистема и инфраструктура для развития бизнеса и
                     комфортной жизни в сфере в ысоких технологий и креативных индустрий.
                   </p>
                   <picture><source srcset="img/about-1.webp" type="image/webp"><img class="about__box-img" src="img/about-1.jpg" alt="about image" /></picture>
                 </div>
-                <div class="about__box-item">
+                <div class="about__box-item about__box-item--right">
                   <p class="about__box-text">
                     Здесь концентрация компаний, стартапов, студентов, специалистов и исследовательских лабораторий
                     создает условия для того, чтобы бизнесы в пределах парка росли быстрее, чем вне его.
@@ -1359,7 +1327,7 @@
                   </select>
                 </form>
               </div>
-              <div class="build__slider swiper" data-mobile="false"> 
+              <div class="build__slider swiper" data-mobile="false">
                 <div class="build__body swiper-wrapper">
                   <a class="build__link swiper-slide" href="#">
                     <picture><source srcset="img/build/1.webp" type="image/webp"><img class="build__link-img" src="img/build/1.jpg" alt="" /></picture>
@@ -1517,7 +1485,7 @@
   </div>
 </footer>
 
-      <script src="js/app.min.js?_v=20230309014540"></script>
+      <script src="js/app.min.js?_v=20230309145221"></script>
     </div>
   </body>
 </html>
