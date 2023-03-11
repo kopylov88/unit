@@ -2717,6 +2717,25 @@ input:focus:-ms-input-placeholder {
 .apartments__show-filters {
   display: none;
   min-height: 50px;
+  position: relative;
+}
+
+.apartments__show-filters:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  right: 10px;
+  background-image: url("../img/icons/arrow-down-black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s;
+}
+
+.apartments__show-filters.active::after {
+  transform: rotateX(180deg);
 }
 
 .apartments__form {
@@ -3379,6 +3398,7 @@ input:focus:-ms-input-placeholder {
     overflow: auto;
     padding: 15px;
     height: calc(100vh - 70px);
+    transition: 0.1s;
     transform: translateX(-200%);
     background: linear-gradient(114.28deg, #252627 3.98%, #2f2f33 122.75%);
   }
@@ -3416,10 +3436,11 @@ input:focus:-ms-input-placeholder {
 
   .footer__item-title::after {
     display: block;
+    transition: 0.3s;
   }
 
   .footer__item-title.open::after {
-    transform: rotate(180deg);
+    transform: rotateX(180deg);
   }
 
   .banner__slider-img {
