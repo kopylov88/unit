@@ -1451,6 +1451,7 @@ input:focus:-ms-input-placeholder {
   align-items: center;
   text-align: center;
   width: 100%;
+  min-height: 60px;
   padding: 5px 10px;
   border-radius: 4px;
   background-color: #f4f3f1;
@@ -1804,7 +1805,6 @@ input:focus:-ms-input-placeholder {
 
 .header__btn {
   max-width: 290px;
-  min-height: 60px;
   margin-left: auto;
 }
 
@@ -1931,7 +1931,6 @@ input:focus:-ms-input-placeholder {
 
 .banner__box-btn {
   max-width: 280px;
-  min-height: 55px;
 }
 
 .banner__box-btn--mobile {
@@ -2068,7 +2067,6 @@ input:focus:-ms-input-placeholder {
   align-items: center;
   max-width: 94px;
   width: 100%;
-  min-height: 32px;
   padding: 3px 10px;
   background: linear-gradient(89.9deg, #242425 -26.72%, #252627 108.61%);
   border-radius: 6px;
@@ -2083,8 +2081,9 @@ input:focus:-ms-input-placeholder {
 }
 
 .layout__plan-link {
-  height: 37px;
+  min-height: 37px;
   padding: 5px 10px;
+  font-size: 15px;
 }
 
 .layout .item-info {
@@ -2703,7 +2702,6 @@ input:focus:-ms-input-placeholder {
 
 .connect__form-btn {
   flex: 0 1 326px;
-  min-height: 60px;
 }
 
 .apartments {
@@ -2716,7 +2714,6 @@ input:focus:-ms-input-placeholder {
 
 .apartments__show-filters {
   display: none;
-  min-height: 50px;
   position: relative;
 }
 
@@ -2829,9 +2826,9 @@ input:focus:-ms-input-placeholder {
   border-top: 1px solid #a6a6a6;
 }
 
-.apartments__form-btn {
+.apartments__form-btn,
+.apartments__form-reset {
   max-width: 200px;
-  min-height: 50px;
 }
 
 .apartments__box {
@@ -3511,7 +3508,8 @@ input:focus:-ms-input-placeholder {
     gap: 10px;
   }
 
-  .apartments__form-btn {
+  .apartments__form-btn,
+  .apartments__form-reset {
     max-width: 150px;
   }
 }
