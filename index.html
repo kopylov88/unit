@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unit Future Development</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230309145221" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230311175930" />
   </head>
   <body>
     <div class="wrapper">
@@ -34,10 +34,10 @@
         <nav class="nav">
           <ul class="header__menu">
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#">Главная</a>
+              <a class="header__menu-link" href="index.html">Главная</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#">Квартиры</a>
+              <a class="header__menu-link" href="apartments.html">Квартиры</a>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="#">Генплан</a>
@@ -52,16 +52,14 @@
               <a class="header__menu-link" href="#">О проекте</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#contacts">Контакты</a>
+              <a class="header__menu-link" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
-        <form class="header__form">
-          <select class="header__language js-choice" name="language">
-            <option value="ukrain">Украинский</option>
-            <option value="russian" selected>Русский</option>
-          </select>
-        </form>
+        <select class="header__language js-choice" name="language">
+          <option value="ukrain">Украинский</option>
+          <option value="russian" selected>Русский</option>
+        </select>
         <a class="header__btn header__btn--mobile btn" href="#">Записаться на просмотр</a>
       </div>
     </div>
@@ -138,9 +136,9 @@
           <div class="container">
             <div class="layout__inner">
               <h2 class="layout__title title">Выбрать планировку</h2>
-              <div class="layout__filters filters">
-                <div class="filters__item filter-rooms">
-                  <form class="filters__item-form">
+              <form class="layout__form">
+                <div class="filters">
+                  <div class="filters__item filter-rooms">
                     <h6 class="filters__item-title">Количество комнат</h6>
                     <div class="filter-rooms__labels">
                       <label class="filters__item-label">
@@ -160,10 +158,8 @@
                         <span class="filter-rooms__checkbox">3+</span>
                       </label>
                     </div>
-                  </form>
-                </div>
-                <div class="filters__item filter-price">
-                  <form class="filter__item-form">
+                  </div>
+                  <div class="filters__item filter-price">
                     <h6 class="filters__item-title">Цена в рублях</h6>
                     <div class="filters__item-body">
                       <div class="filters__item-value">
@@ -179,10 +175,8 @@
                         data-max="5000000"
                       />
                     </div>
-                  </form>
-                </div>
-                <div class="filters__item filter-square">
-                  <form class="filter__item-form">
+                  </div>
+                  <div class="filters__item filter-square">
                     <h6 class="filters__item-title">Площадь м<sup>2</sup></h6>
                     <div class="filters__item-body">
                       <div class="filters__item-value">
@@ -198,10 +192,8 @@
                         data-max="105.6"
                       />
                     </div>
-                  </form>
-                </div>
-                <div class="filters__item filter-floor">
-                  <form class="filter__item-form">
+                  </div>
+                  <div class="filters__item filter-floor">
                     <h6 class="filters__item-title">Этаж</h6>
                     <div class="filters__item-body">
                       <div class="filters__item-value">
@@ -217,9 +209,9 @@
                         data-max="25"
                       />
                     </div>
-                  </form>
+                  </div>
                 </div>
-              </div>
+              </form>
               <div class="layout__plan">
                 <picture><source srcset="img/plan.webp" type="image/webp"><img class="layout__plan-img" src="img/plan.jpg" alt="plan image" /></picture>
                 <div class="layout__items">
@@ -1314,8 +1306,8 @@
             <div class="build__inner">
               <div class="build__head">
                 <h2 class="build__title title">Ход строительства</h2>
-                <form class="build__selects">
-                  <select class="js-choice" name="cor">
+                <div class="build__selects">
+                  <select class="js-choice" name="house">
                     <option value="">Корпус A</option>
                     <option value="">Корпус B</option>
                     <option value="">Корпус C</option>
@@ -1325,7 +1317,7 @@
                     <option value="">2021</option>
                     <option value="">2020</option>
                   </select>
-                </form>
+                </div>
               </div>
               <div class="build__slider swiper" data-mobile="false">
                 <div class="build__body swiper-wrapper">
@@ -1355,7 +1347,7 @@
             </div>
           </div>
         </section>
-        <section class="connect" id="contacts">
+        <section class="connect">
           <div class="container">
             <div class="connect__inner">
               <form class="connect__form">
@@ -1485,7 +1477,7 @@
   </div>
 </footer>
 
-      <script src="js/app.min.js?_v=20230309145221"></script>
+      <script src="js/app.min.js?_v=20230311175930"></script>
     </div>
   </body>
 </html>
