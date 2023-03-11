@@ -3379,13 +3379,13 @@ input:focus:-ms-input-placeholder {
     overflow: auto;
     padding: 15px;
     height: calc(100vh - 70px);
-    transition: 0.3s;
     transform: translateX(-200%);
     background: linear-gradient(114.28deg, #252627 3.98%, #2f2f33 122.75%);
   }
 
   .header__bottom.open {
     transform: translateX(0);
+    transition: 0.3s;
   }
 
   .header__menu {
