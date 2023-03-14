@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unit Future Development</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230313233416" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230314223320" />
   </head>
   <body>
     <div class="wrapper">
@@ -72,7 +72,7 @@
             <div class="apartment__inner">
               <div class="apartment__item apartment__item--img">
                 <div class="apartment__img">
-                  <picture><source srcset="img/apartment/1.webp" type="image/webp"><img src="img/apartment/1.png" alt="apartment image" /></picture>
+                  <picture><source srcset="img/apartment/1.webp" type="image/webp"><img src="img/apartment/1.png" alt="apartment image" data-da=".apartment__content,950,2" /></picture>
                 </div>
               </div>
               <div class="apartment__item">
@@ -140,6 +140,7 @@
                             alt="slider image"
                             loading="lazy"
                           />
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                       </div>
                       <div class="swiper-button-prev"></div>
@@ -166,6 +167,7 @@
                             alt="slider image"
                             loading="lazy"
                           />
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                       </div>
                       <div class="swiper-button-prev"></div>
@@ -192,6 +194,7 @@
                             alt="slider image"
                             loading="lazy"
                           />
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                       </div>
                       <div class="swiper-button-prev"></div>
@@ -218,6 +221,7 @@
                             alt="slider image"
                             loading="lazy"
                           />
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                       </div>
                       <div class="swiper-button-prev"></div>
@@ -262,119 +266,122 @@
             <div class="similar__inner">
               <h2 class="similar__title title">Схожие планировки</h2>
             </div>
-            <div class="similar__box">
-              <a class="item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <picture><source srcset="img/apartments/1.webp" type="image/webp"><img class="item-apartments__img" src="img/apartments/1.png" alt="apartment image" /></picture>
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments__item-info apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
+            <div class="similar__box swiper" data-mobile="false">
+              <div class="swiper-wrapper">
+                <a class="item-apartments swiper-slide" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <picture><source srcset="img/apartments/1.webp" type="image/webp"><img class="item-apartments__img" src="img/apartments/1.png" alt="apartment image" /></picture>
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments__item-info apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
                   </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
+                </a>
+                <a class="item-apartments swiper-slide" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <picture><source srcset="img/apartments/2.webp" type="image/webp"><img class="item-apartments__img" src="img/apartments/2.png" alt="apartment image" /></picture>
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments__item-info apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a class="item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <picture><source srcset="img/apartments/2.webp" type="image/webp"><img class="item-apartments__img" src="img/apartments/2.png" alt="apartment image" /></picture>
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments__item-info apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
+                </a>
+                <a class="item-apartments swiper-slide" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <picture><source srcset="img/apartments/3.webp" type="image/webp"><img class="item-apartments__img" src="img/apartments/3.png" alt="apartment image" /></picture>
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments__item-info apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
                   </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
+                </a>
+                <a class="item-apartments swiper-slide" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <picture><source srcset="img/apartments/4.webp" type="image/webp"><img class="item-apartments__img" src="img/apartments/4.png" alt="apartment image" /></picture>
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments__item-info apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a class="item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <picture><source srcset="img/apartments/3.webp" type="image/webp"><img class="item-apartments__img" src="img/apartments/3.png" alt="apartment image" /></picture>
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments__item-info apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <picture><source srcset="img/apartments/4.webp" type="image/webp"><img class="item-apartments__img" src="img/apartments/4.png" alt="apartment image" /></picture>
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments__item-info apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </section>
@@ -508,7 +515,7 @@
   </div>
 </footer>
 
-      <script src="js/app.min.js?_v=20230313233416"></script>
+      <script src="js/app.min.js?_v=20230314223320"></script>
     </div>
   </body>
 </html>
