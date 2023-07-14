@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Future Development</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html', {})
+      <main class="main">
+        <div class="apartment">
+          <div class="container">
+            <div class="apartment__inner">
+              <div class="apartment__item apartment__item--img">
+                <div class="apartment__img">
+                  <img src="@img/apartment/1.png" alt="apartment image" data-da=".apartment__content,950,2" />
+                </div>
+              </div>
+              <div class="apartment__item">
+                <div class="apartment__content">
+                  <p class="apartment__number">кв-4-31-6</p>
+                  <h5 class="apartment__title">Квартира-студия 28.3 м²</h5>
+                  <p class="apartment__info">Квартиру можно укпить в ипотеку</p>
+                  <ul class="apartment__descr">
+                    <li class="apartment__descr-item">
+                      <span class="apartment__descr-name">Этаж</span>
+                      <span class="apartment__descr-value">8</span>
+                    </li>
+                    <li class="apartment__descr-item">
+                      <span class="apartment__descr-name">Корпус</span>
+                      <span class="apartment__descr-value">6</span>
+                    </li>
+                    <li class="apartment__descr-item">
+                      <span class="apartment__descr-name">Срок сдачи</span>
+                      <span class="apartment__descr-value">ІІІ квартал 2024</span>
+                    </li>
+                    <li class="apartment__descr-item">
+                      <span class="apartment__descr-name">Оттделка</span>
+                      <span class="apartment__descr-value">Предчистовая</span>
+                    </li>
+                  </ul>
+                  <div class="apartment__bottom">
+                    <div class="apartment__price">
+                      <p class="apartment__price-head">Цена в руб</p>
+                      <p class="apartment__price-value">2500000</p>
+                    </div>
+                    <button class="apartment__bottom-btn btn">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="apartment-gallery">
+          <div class="container">
+            <div class="apartment-gallery__inner">
+              <h2 class="apartment-gallery__title title">Галерея</h2>
+              <div class="apartment-gallery__tabs">
+                <div class="apartment-gallery__buttons">
+                  <button class="apartment-gallery__btn active" data-tab="#tab-1">Фасад</button>
+                  <button class="apartment-gallery__btn" data-tab="#tab-2">Подъезд</button>
+                  <button class="apartment-gallery__btn" data-tab="#tab-3">Благоустройство</button>
+                  <button class="apartment-gallery__btn" data-tab="#tab-4">Отделка</button>
+                </div>
+                <div class="apartment-gallery__content">
+                  <div class="apartment-gallery__content-item active" id="tab-1">
+                    <div class="apartment-gallery__slider swiper">
+                      <div class="swiper-wrapper">
+                        <div class="apartment-gallery__slide swiper-slide">
+                          <img
+                            class="apartment-gallery__slide-img"
+                            src="@img/apartment-gallery/1.jpg"
+                            alt="slider image"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="apartment-gallery__slide swiper-slide">
+                          <img
+                            class="apartment-gallery__slide-img"
+                            src="@img/apartment-gallery/2.jpg"
+                            alt="slider image"
+                            loading="lazy"
+                          />
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-scrollbar"></div>
+                    </div>
+                  </div>
+                  <div class="apartment-gallery__content-item" id="tab-2">
+                    <div class="apartment-gallery__slider swiper">
+                      <div class="swiper-wrapper">
+                        <div class="apartment-gallery__slide swiper-slide">
+                          <img
+                            class="apartment-gallery__slide-img"
+                            src="@img/apartment-gallery/1.jpg"
+                            alt="slider image"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="apartment-gallery__slide swiper-slide">
+                          <img
+                            class="apartment-gallery__slide-img"
+                            src="@img/apartment-gallery/2.jpg"
+                            alt="slider image"
+                            loading="lazy"
+                          />
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-scrollbar"></div>
+                    </div>
+                  </div>
+                  <div class="apartment-gallery__content-item" id="tab-3">
+                    <div class="apartment-gallery__slider swiper">
+                      <div class="swiper-wrapper">
+                        <div class="apartment-gallery__slide swiper-slide">
+                          <img
+                            class="apartment-gallery__slide-img"
+                            src="@img/apartment-gallery/1.jpg"
+                            alt="slider image"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="apartment-gallery__slide swiper-slide">
+                          <img
+                            class="apartment-gallery__slide-img"
+                            src="@img/apartment-gallery/2.jpg"
+                            alt="slider image"
+                            loading="lazy"
+                          />
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-scrollbar"></div>
+                    </div>
+                  </div>
+                  <div class="apartment-gallery__content-item" id="tab-4">
+                    <div class="apartment-gallery__slider swiper">
+                      <div class="swiper-wrapper">
+                        <div class="apartment-gallery__slide swiper-slide">
+                          <img
+                            class="apartment-gallery__slide-img"
+                            src="@img/apartment-gallery/1.jpg"
+                            alt="slider image"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="apartment-gallery__slide swiper-slide">
+                          <img
+                            class="apartment-gallery__slide-img"
+                            src="@img/apartment-gallery/2.jpg"
+                            alt="slider image"
+                            loading="lazy"
+                          />
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-scrollbar"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="info">
+          <div class="container">
+            <div class="info__inner">
+              <div class="info__item">
+                <div class="info__item-content info__item-content--parking">
+                  <p class="info__item-head">Доступно 1783 парковочных мест</p>
+                  <p class="info__item-text">Скидка 100 000 руб., при покупке паркового места</p>
+                  <a class="info__item-link" href="#">Прейти к парковочным местам</a>
+                </div>
+                <div class="info__item-img">
+                  <img src="@img/info/2.jpg" alt="parking" />
+                </div>
+              </div>
+              <div class="info__item">
+                <div class="info__item-content info__item-content--pantry">
+                  <p class="info__item-head">Доступно 184 кладовки</p>
+                  <p class="info__item-text">Увеличьте полезную площадь квартиры, приобретя кладовую</p>
+                  <a class="info__item-link" href="#">Прейти к кладовкам</a>
+                </div>
+                <div class="info__item-img">
+                  <img src="@img/info/1.jpg" alt="pantry" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="similar">
+          <div class="container">
+            <div class="similar__inner">
+              <h2 class="similar__title title">Схожие планировки</h2>
+            </div>
+            <div class="similar__box swiper" data-mobile="false">
+              <div class="swiper-wrapper">
+                <a class="item-apartments swiper-slide" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/1.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="item-apartments swiper-slide" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/2.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="item-apartments swiper-slide" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/3.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="item-apartments swiper-slide" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/4.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <section class="connect">
+          <div class="container">
+            <div class="connect__inner">
+              <form class="connect__form">
+                <h2 class="connect__title title">Записаться на просмотр</h2>
+                <input class="connect__form-input" type="text" placeholder="Ваше имя" />
+                <input class="connect__form-input" type="tel" placeholder="Ваш телефон" />
+                <button class="connect__form-btn btn" type="submit">Записаться</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/footer.html', {})
+      <script src="js/app.min.js"></script>
+    </div>
+  </body>
+</html>

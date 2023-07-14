@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Future Development</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {})
+    <main class="main">
+      <section class="pantries">
+        <div class="container">
+          <h2 class="pantries__title title">Кладовые</h2>
+          <button class="show-filters btn">Фильтр</button>
+          <form class="pantries__form form">
+            <div class="pantries__filters filters">
+              <div class="filters__item filter-price">
+                <h6 class="filters__item-title">Цена в рублях</h6>
+                <div class="filters__item-body">
+                  <div class="filters__item-value">
+                    от <span class="price-from"></span> - до <span class="price-to"></span>
+                  </div>
+                  <input class="range-price" type="range" data-type="double" data-from="150000" data-to="280000"
+                    data-min="100000" data-max="300000" name="price" />
+                </div>
+              </div>
+              <div class="filters__item filter-square">
+                <h6 class="filters__item-title">Площадь м<sup>2</sup></h6>
+                <div class="filters__item-body">
+                  <div class="filters__item-value">
+                    от <span class="square-from"></span> - до <span class="square-to"></span>
+                  </div>
+                  <input class="range-square" type="range" data-type="double" data-from="3" data-to="7.1" data-min="2"
+                    data-max="8" name="square" />
+                </div>
+              </div>
+            </div>
+            <div class="form__btns">
+              <button class="form__btn btn" type="submit">Применить</button>
+              <div class="form__value">Доступно <span>738</span> квартир</div>
+              <button class="form__reset btn" type="reset">Очистить</button>
+            </div>
+          </form>
+          <div class="pantries__body">
+            <div class="pantries__select">
+              <h6 class="pantries__select-title">Сортировать по</h6>
+              <select class="js-choice" name="sort">
+                <option value="cheaper" selected>Сначала дешевле</option>
+                <option value="expensive">Сначала дороже</option>
+              </select>
+            </div>
+            <div class="pantries__item">
+              <div class="pantries__content">
+                <div class="pantries__content-box">
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Кладовая</div>
+                    <div class="pantries__content-value">З-К237</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Цена</div>
+                    <div class="pantries__content-value">10000</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Секция</div>
+                    <div class="pantries__content-value">F</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Площадь</div>
+                    <div class="pantries__content-value">4,35м<sup>2</sup></div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Этаж</div>
+                    <div class="pantries__content-value">-2</div>
+                  </div>
+                </div>
+                <button class="pantries__content-btn btn">Забронировать кладовую</button>
+                <button class="pantries__show-btn">
+                  <img src="@img/icons/arrow-down-big.svg" alt="arrow down" />
+                </button>
+              </div>
+              <div class="pantries__img">
+                <img src="@img/pantries.png" alt="Кладовая" />
+              </div>
+            </div>
+            <div class="pantries__item">
+              <div class="pantries__content">
+                <div class="pantries__content-box">
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Кладовая</div>
+                    <div class="pantries__content-value">З-К237</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Цена</div>
+                    <div class="pantries__content-value">10000</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Секция</div>
+                    <div class="pantries__content-value">F</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Площадь</div>
+                    <div class="pantries__content-value">4,35м<sup>2</sup></div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Этаж</div>
+                    <div class="pantries__content-value">-2</div>
+                  </div>
+                </div>
+                <button class="pantries__content-btn btn">Забронировать кладовую</button>
+                <button class="pantries__show-btn">
+                  <img src="@img/icons/arrow-down-big.svg" alt="arrow down" />
+                </button>
+              </div>
+              <div class="pantries__img">
+                <img src="@img/pantries.png" alt="Кладовая" />
+              </div>
+            </div>
+            <div class="pantries__item">
+              <div class="pantries__content">
+                <div class="pantries__content-box">
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Кладовая</div>
+                    <div class="pantries__content-value">З-К237</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Цена</div>
+                    <div class="pantries__content-value">10000</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Секция</div>
+                    <div class="pantries__content-value">F</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Площадь</div>
+                    <div class="pantries__content-value">4,35м<sup>2</sup></div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Этаж</div>
+                    <div class="pantries__content-value">-2</div>
+                  </div>
+                </div>
+                <button class="pantries__content-btn btn">Забронировать кладовую</button>
+                <button class="pantries__show-btn">
+                  <img src="@img/icons/arrow-down-big.svg" alt="arrow down" />
+                </button>
+              </div>
+              <div class="pantries__img">
+                <img src="@img/pantries.png" alt="Кладовая" />
+              </div>
+            </div>
+            <div class="pantries__item">
+              <div class="pantries__content">
+                <div class="pantries__content-box">
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Кладовая</div>
+                    <div class="pantries__content-value">З-К237</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Цена</div>
+                    <div class="pantries__content-value">10000</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Секция</div>
+                    <div class="pantries__content-value">F</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Площадь</div>
+                    <div class="pantries__content-value">4,35м<sup>2</sup></div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Этаж</div>
+                    <div class="pantries__content-value">-2</div>
+                  </div>
+                </div>
+                <button class="pantries__content-btn btn">Забронировать кладовую</button>
+                <button class="pantries__show-btn">
+                  <img src="@img/icons/arrow-down-big.svg" alt="arrow down" />
+                </button>
+              </div>
+              <div class="pantries__img">
+                <img src="@img/pantries.png" alt="Кладовая" />
+              </div>
+            </div>
+            <div class="pantries__item">
+              <div class="pantries__content">
+                <div class="pantries__content-box">
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Кладовая</div>
+                    <div class="pantries__content-value">З-К237</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Цена</div>
+                    <div class="pantries__content-value">10000</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Секция</div>
+                    <div class="pantries__content-value">F</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Площадь</div>
+                    <div class="pantries__content-value">4,35м<sup>2</sup></div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Этаж</div>
+                    <div class="pantries__content-value">-2</div>
+                  </div>
+                </div>
+                <button class="pantries__content-btn btn">Забронировать кладовую</button>
+                <button class="pantries__show-btn">
+                  <img src="@img/icons/arrow-down-big.svg" alt="arrow down" />
+                </button>
+              </div>
+              <div class="pantries__img">
+                <img src="@img/pantries.png" alt="Кладовая" />
+              </div>
+            </div>
+            <div class="pantries__item">
+              <div class="pantries__content">
+                <div class="pantries__content-box">
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Кладовая</div>
+                    <div class="pantries__content-value">З-К237</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Цена</div>
+                    <div class="pantries__content-value">10000</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Секция</div>
+                    <div class="pantries__content-value">F</div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Площадь</div>
+                    <div class="pantries__content-value">4,35м<sup>2</sup></div>
+                  </div>
+                  <div class="pantries__content-item">
+                    <div class="pantries__content-head">Этаж</div>
+                    <div class="pantries__content-value">-2</div>
+                  </div>
+                </div>
+                <button class="pantries__content-btn btn">Забронировать кладовую</button>
+                <button class="pantries__show-btn">
+                  <img src="@img/icons/arrow-down-big.svg" alt="arrow down" />
+                </button>
+              </div>
+              <div class="pantries__img">
+                <img src="@img/pantries.png" alt="Кладовая" />
+              </div>
+            </div>
+            <button class="pantries__show-more">Показать ещё <span>146</span> кладовых</button>
+          </div>
+        </div>
+      </section>
+      <section class="connect" id="connect">
+        <div class="container">
+          <div class="connect__inner">
+            <form class="connect__form">
+              <h2 class="connect__title title">Записаться на просмотр</h2>
+              <input class="connect__form-input" type="text" placeholder="Ваше имя" />
+              <input class="connect__form-input" type="tel" placeholder="Ваш телефон" />
+              <button class="connect__form-btn btn" type="submit">Записаться</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {})
+    <script src="js/app.min.js"></script>
+  </div>
+</body>
+
+</html>
