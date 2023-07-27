@@ -1,0 +1,24 @@
+.connect {
+  padding: 45px 0 80px;
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  &__title {
+    flex: 0 1 245px;
+    font-size: 38px;
+    line-height: 46/38 * 1;
+    letter-spacing: 0.02em;
+    color: #fbf8f3;
+  }
+  &__form-input {
+    flex: 0 1 280px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #858585;
+  }
+  &__form-btn {
+    flex: 0 1 326px;
+  }
+}

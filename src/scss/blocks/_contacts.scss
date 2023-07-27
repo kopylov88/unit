@@ -1,0 +1,27 @@
+.contacts {
+  padding: 45px 0;
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    gap: 15px;
+  }
+  &__item-head {
+    font-size: 14px;
+    color: #A5A5A5;
+  }
+  &__item-value {
+    font-size: 20px;
+  }
+  &__socials {
+    display: flex;
+    gap: 12px;
+  }
+  &__socials-item {
+    width: 28px;
+    height: 28px;
+  }
+}

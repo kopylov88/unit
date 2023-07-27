@@ -1,0 +1,29 @@
+.about {
+  padding: 45px 0;
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__box-item {
+    flex: 0 1 685px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__box-text {
+    margin-bottom: 20px;
+  }
+  &__box-img {
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  &__bottom-img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

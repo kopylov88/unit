@@ -1,0 +1,161 @@
+.layout {
+  padding: 45px 0;
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__form {
+    margin-bottom: 40px;
+  }
+  &__plan {
+    position: relative;
+  }
+  &__plan-img {
+    width: 100%;
+    height: 788px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  &__item {
+    position: absolute;
+    &:hover .layout__item-box {
+      opacity: 1;
+      visibility: visible;
+    }
+    &:nth-child(1) {
+      bottom: 304px;
+      left: 311px;
+    }
+    &:nth-child(2) {
+      bottom: 176px;
+      left: 466px;
+    }
+    &:nth-child(3) {
+      top: 387px;
+      left: 490px;
+    }
+    &:nth-child(4) {
+      top: 288px;
+      left: 600px;
+    }
+    &:nth-child(5) {
+      top: 274px;
+      left: 1214px;
+    }
+    &:nth-child(6) {
+      bottom: 299px;
+      left: 591px;
+    }
+    &:nth-child(7) {
+      bottom: 233px;
+      left: 646px;
+    }
+    &:nth-child(8) {
+      top: 219px;
+      left: 938px;
+    }
+    &:nth-child(9) {
+      bottom: 312px;
+      left: 762px;
+    }
+    &:nth-child(10) {
+      bottom: 117px;
+      left: 623px;
+    }
+    &:nth-child(11) {
+      bottom: 52px;
+      left: 958px;
+    }
+    &:nth-child(12) {
+      top: 209px;
+      left: 1103px;
+    }
+    &:nth-child(13) {
+      top: 388px;
+      left: 1298px;
+    }
+    &:nth-child(14) {
+      top: 314px;
+      left: 750px;
+    }
+    &:nth-child(15) {
+      top: 362px;
+      left: 955px;
+    }
+  }
+  &__item-box {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+    bottom: -50px;
+    right: 100%;
+    transition: 0.3s;
+    .layout__item-head {
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+  &__item-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 94px;
+    width: 100%;
+    padding: 3px 10px;
+    background: linear-gradient(89.9deg, #242425 -26.72%, #252627 108.61%);
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid #39393c;
+    cursor: pointer;
+    transition: 0.3s;
+    .touch &.open {
+      background: $accent-color;
+    }
+  }
+  &__plan-link {
+    min-height: 37px;
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+  .item-info {
+    min-width: 164px;
+    border-radius: 6px;
+    background: linear-gradient(89.9deg, #242425 -26.72%, #252627 108.61%);
+    padding: 16px;
+    font-size: 15px;
+    margin-top: -16px;
+    &__head {
+      font-size: 12px;
+      color: #858585;
+      border-bottom: 0.6px solid #39393c;
+      padding-bottom: 5px;
+      margin-bottom: 12px;
+      span {
+        font-size: 14px;
+        display: block;
+      }
+    }
+    &__list {
+      margin-bottom: 12px;
+    }
+    &__list-item {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+    &__list-rooms {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      background-color: #252627;
+      border: 0.6px solid #39393c;
+      width: 32px;
+      height: 30px;
+      font-size: 14px;
+    }
+  }
+}

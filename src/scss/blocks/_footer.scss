@@ -1,0 +1,70 @@
+.footer {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    padding: 10px 0 20px;
+  }
+  &__item-logo {
+    margin-bottom: 36px;
+  }
+  &__item-title {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24/20 * 1;
+    letter-spacing: 0.025em;
+    margin-bottom: 20px;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 20px;
+      height: 20px;
+      background-image: url('@img/icons/caret-down.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      display: none;
+    }
+  }
+  &__list {
+    transition: 0.3s;
+  }
+  &__list-item {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+  &__list-link {
+    font-size: 16px;
+    line-height: 1.4;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      background-color: #e0e0e0;
+      transition: 0.3s;
+    }
+    .no-touch &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+  &__item-text {
+    max-width: 220px;
+    font-size: 12px;
+    line-height: 15/12 * 1;
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

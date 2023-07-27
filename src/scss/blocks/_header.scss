@@ -1,0 +1,113 @@
+.header {
+  margin-top: 22px;
+  position: relative;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(114.28deg, #252627 3.98%, #2f2f33 122.75%);
+    border-radius: 8px;
+    padding: 16px 16px 0;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #39393c;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+    column-gap: 36px;
+  }
+  &__menu-link {
+    font-size: 15px;
+    line-height: 18/15 * 1;
+    padding: 14px 0;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      background-color: #e0e0e0;
+      transition: 0.3s;
+    }
+    .no-touch &:hover::after {
+      transform: scaleX(1);
+    }
+    &--active:after {
+      transform: scaleX(1);
+    }
+  }
+  &__phone {
+    margin-left: 64px;
+    margin-right: 48px;
+    padding-left: 48px;
+    max-width: 210px;
+    position: relative;
+    line-height: 1.22;
+    letter-spacing: 0.025em;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url('@img/icons/phone.svg');
+    }
+  }
+  &__phone-text {
+    font-size: 13px;
+    color: #a6a6a6;
+  }
+  &__adress {
+    padding-left: 48px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url('@img/icons/adress.svg');
+    }
+  }
+  &__adress-street {
+    display: block;
+    line-height: 1.22;
+    letter-spacing: 0.025em;
+  }
+  &__adress-city {
+    display: block;
+    font-size: 13px;
+    color: #a6a6a6;
+  }
+  &__btn {
+    max-width: 290px;
+    margin-left: auto;
+    &--mobile {
+      display: none;
+    }
+  }
+  &__select {
+    max-width: 120px;
+    width: 100%;
+  }
+  .choices__inner {
+    border: none;
+    background: transparent;
+  }
+  .choices[data-type*='select-one']::after {
+    content: '';
+    right: 0;
+  }
+}
