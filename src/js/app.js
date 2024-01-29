@@ -188,6 +188,8 @@ pantriesShowBtns.forEach(function (item) {
   });
 });
 
+document.querySelector('.header__menu-link').classList.add('header__menu-link--active');
+
 menuLinks.forEach(function (item) {
   if (window.location.pathname.indexOf(item.getAttribute('href')) > -1) {
     menuLinks.forEach(function (el) {
