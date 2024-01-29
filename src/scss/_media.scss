@@ -598,7 +598,7 @@
   }
 
   .banner__slider-img {
-    height: 486px;
+    height: calc(100dvh - 110px);
   }
 
   .banner__box {

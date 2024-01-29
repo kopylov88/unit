@@ -3,7 +3,6 @@ import $ from 'jquery';
 import Choices from 'choices.js';
 import 'ion-rangeslider';
 import Inputmask from 'inputmask';
-
 import { useDynamicAdapt } from './modules/dynamicAdapt.js';
 import { gsapAnimations } from './modules/gsap.js';
 import { sliders } from './modules/sliders.js';
@@ -156,16 +155,22 @@ galleryBtns.forEach(function (item) {
   item.addEventListener('click', function () {
     let tabId = item.getAttribute('data-tab');
     let currentContent = document.querySelector(tabId);
-    galleryBtns.forEach(function (item) {
-      item.classList.remove('active');
-    });
-    item.classList.add('active');
-    tabContents.forEach(function (el) {
-      el.classList.remove('active');
-    });
-    currentContent.classList.add('active');
+    if (!item.classList.contains('active')) {
+      galleryBtns.forEach(function (item) {
+        item.classList.remove('active');
+      });
+      item.classList.add('active');
+      tabContents.forEach(function (el) {
+        el.classList.remove('active');
+      });
+      currentContent.classList.add('active');
+    }
   });
 });
+
+if (document.querySelector('.apartment-gallery__btn')) {
+  document.querySelector('.apartment-gallery__btn').click();
+}
 
 const pantriesShowBtns = document.querySelectorAll('.pantries__show-btn');
 pantriesShowBtns.forEach(function (item) {
