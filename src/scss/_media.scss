@@ -880,6 +880,10 @@
     margin-top: 16px;
   }
 
+  .banner__slider-img {
+    height: calc(100dvh - 180px);
+  }
+
   .title {
     font-size: 26px;
     margin-bottom: 20px;

@@ -15,7 +15,9 @@
     align-items: center;
     padding-bottom: 14px;
     border-bottom: 2px solid #39393c;
-    opacity: 0;
+    @media(min-width: 767.98px) {
+      opacity: 0;
+    }
   }
 
   &__bottom {
@@ -29,7 +31,9 @@
     column-gap: 36px;
   }
   &__menu-item {
-    opacity: 0;
+    @media(min-width: 767.98px) {
+      opacity: 0;
+    }
   }
 
   &__menu-link {
