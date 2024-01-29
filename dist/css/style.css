@@ -1815,23 +1815,20 @@ body.noscroll {
   position: relative;
 }
 
-.header__menu-link::after {
+.header__menu-link::before {
   content: "";
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
   height: 2px;
-  transform: scaleX(0);
   background-color: #e0e0e0;
-  transition: 0.3s;
+  transition: transform 0.3s;
+  transform-origin: right;
+  transform: scaleX(0);
 }
 
-.no-touch .header__menu-link:hover::after {
-  transform: scaleX(1);
-}
-
-.header__menu-link--active:after {
+.header__menu-link--active::before {
   transform: scaleX(1);
 }
 
@@ -4475,6 +4472,11 @@ body.noscroll {
 }
 
 @media (hover: hover) {
+  .header__menu-link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
   .footer__socials-link:hover {
     scale: 1.1;
   }

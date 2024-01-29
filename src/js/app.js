@@ -167,7 +167,6 @@ galleryBtns.forEach(function (item) {
     }
   });
 });
-
 if (document.querySelector('.apartment-gallery__btn')) {
   document.querySelector('.apartment-gallery__btn').click();
 }
