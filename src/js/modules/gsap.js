@@ -6,11 +6,11 @@ export function gsapAnimations() {
 
   if (window.innerWidth > 767.98) {
     const tlHeader = gsap.timeline();
-    tlHeader.from('.header__top', { opacity: 0, duration: 1 });
-    tlHeader.from('.header__menu-item', { opacity: 0, y: -10, duration: 1, stagger: 0.1 });
-    tlHeader.from('.banner__box', { opacity: 0, duration: .5 }, '-=.5');
-    tlHeader.from('.banner__box-title', { opacity: 0, y: 30, duration: .5 });
-    tlHeader.from('.banner__box-text', { opacity: 0, y: 30, duration: .5 });
+    tlHeader.to('.header__top', { opacity: 1, duration: 1 });
+    tlHeader.to('.header__menu-item', { opacity: 1, y: -5, duration: 1, stagger: 0.1 });
+    tlHeader.to('.banner__box', { opacity: 1, duration: .5 }, '-=.5');
+    tlHeader.to('.banner__box-title', { opacity: 1, y: 0, duration: .5 });
+    tlHeader.to('.banner__box-text', { opacity: 1, y: 0, duration: .5 });
 
     gsap.from('.layout', {
       opacity: 0,

@@ -15,6 +15,7 @@
     align-items: center;
     padding-bottom: 14px;
     border-bottom: 2px solid #39393c;
+    opacity: 0;
   }
 
   &__bottom {
@@ -26,6 +27,9 @@
   &__menu {
     display: flex;
     column-gap: 36px;
+  }
+  &__menu-item {
+    opacity: 0;
   }
 
   &__menu-link {
