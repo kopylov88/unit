@@ -1830,6 +1830,7 @@ body.noscroll {
 
 .header__menu-link--active::before {
   transform: scaleX(1);
+  transition: none;
 }
 
 .header__phone {
@@ -3378,14 +3379,6 @@ body.noscroll {
 }
 
 @media (min-width: 767.98px) {
-  .header__top {
-    opacity: 0;
-  }
-
-  .header__menu-item {
-    opacity: 0;
-  }
-
   .banner__box {
     opacity: 0;
   }
@@ -3933,14 +3926,13 @@ body.noscroll {
     overflow: auto;
     padding: 15px;
     height: calc(100vh - 70px);
-    transition: 0.1s;
+    transition: 0.15s;
     transform: translateX(-200%);
     background: linear-gradient(114.28deg, #252627 3.98%, #2f2f33 122.75%);
   }
 
   .header__bottom.open {
     transform: translateX(0);
-    transition: 0.3s;
   }
 
   .header__menu {
@@ -3951,13 +3943,13 @@ body.noscroll {
     padding-left: 16px;
   }
 
-  .header__menu-link:after {
+  .header__menu-link:before {
     width: 4px;
     height: 0;
     background-color: #767BFF;
   }
 
-  .header__menu-link--active::after {
+  .header__menu-link--active::before {
     height: 100%;
   }
 
@@ -4507,6 +4499,12 @@ body.noscroll {
 
   .footer__socials-link:hover {
     scale: 1.1;
+  }
+}
+
+@media (max-height: 650px) {
+  .banner__slider-img {
+    height: 500px;
   }
 }
 
