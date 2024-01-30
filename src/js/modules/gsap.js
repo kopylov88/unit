@@ -4,11 +4,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function gsapAnimations() {
 
-  if (window.innerWidth > 767.98) {
+  if (window.innerWidth > 767.98 && window.innerHeight > 600) {
     const tlHeader = gsap.timeline();
-    tlHeader.to('.banner__box', { opacity: 1, duration: .5 }, '-=.5');
-    tlHeader.to('.banner__box-title', { opacity: 1, y: 0, duration: .5 });
-    tlHeader.to('.banner__box-text', { opacity: 1, y: 0, duration: .5 });
+    tlHeader.to('.banner__box', { opacity: 1, duration: 1, });
+    tlHeader.to('.banner__box-title', { opacity: 1, y: 0, duration: 1 });
+    tlHeader.to('.banner__box-text', { opacity: 1, y: 0, duration: 1 });
 
     gsap.from('.layout', {
       opacity: 0,
