@@ -1712,6 +1712,28 @@ body.noscroll {
   transform: rotateX(180deg);
 }
 
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #39393c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 1;
+  font-size: 50px;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
 @font-face {
   font-family: Inter;
   font-display: swap;
@@ -3378,7 +3400,7 @@ body.noscroll {
   }
 }
 
-@media (min-width: 767.98px) {
+@media (min-width: 767.98px) and (min-height: 600px) {
   .banner__box {
     opacity: 0;
   }
@@ -3925,7 +3947,7 @@ body.noscroll {
     flex-direction: column;
     overflow: auto;
     padding: 15px;
-    height: calc(100vh - 70px);
+    height: calc(100dvh - 70px);
     transition: 0.15s;
     transform: translateX(-200%);
     background: linear-gradient(114.28deg, #252627 3.98%, #2f2f33 122.75%);

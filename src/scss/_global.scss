@@ -394,3 +394,25 @@ body {
     transform: rotateX(180deg);
   }
 }
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #39393c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 1;
+  font-size: 50px;
+  pointer-events: none;
+  transition: opacity .5s;
+}

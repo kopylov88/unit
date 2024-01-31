@@ -6,9 +6,9 @@ export function sliders() {
     fadeEffect: {
       crossFade: true,
     },
-    autoplay: {
-      delay: 3000,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    // },
     loop: true,
   });
 
