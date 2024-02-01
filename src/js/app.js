@@ -10,15 +10,15 @@ import { sliders } from './modules/sliders.js';
 const menuBtn = document.querySelector('.menu-btn');
 const body = document.body;
 const menu = document.querySelector('.header__bottom');
-const menuLinks = document.querySelectorAll('.header__menu-link');
 const headerBtn = document.querySelector('.header__btn--mobile');
+const navLinks = document.querySelectorAll('.link');
 
 menuBtn.addEventListener('click', () => {
   menu.classList.toggle('open');
   body.classList.toggle('noscroll');
   menuBtn.classList.toggle('clicked');
 });
-menuLinks.forEach(function (el) {
+navLinks.forEach(function (el) {
   el.addEventListener('click', () => {
     menu.classList.remove('open');
     body.classList.remove('noscroll');
@@ -38,7 +38,7 @@ document.querySelector('.header__menu-link').classList.add('header__menu-link--a
 const contentDiv = document.querySelector('.main');
 const loadingOverlay = document.querySelector('.loading-overlay');
 
-const sowLoadingOverlay = function () {
+const showLoadingOverlay = function () {
   loadingOverlay.style.opacity = '1';
 }
 const hideLoadingOverlay = function () {
@@ -211,7 +211,7 @@ const loadScripts = function (url) {
 }
 
 const loadPage = function (url) {
-  sowLoadingOverlay();
+  showLoadingOverlay();
   fetch(url)
     .then(response => response.text())
     .then(html => {
@@ -226,9 +226,9 @@ const loadPage = function (url) {
         contentDiv.classList.remove('fade-out');
         history.pushState({}, '', url);
 
-        menuLinks.forEach(function (item) {
+        navLinks.forEach(function (item) {
           if (window.location.pathname.indexOf(item.getAttribute('href')) > -1) {
-            menuLinks.forEach(function (el) {
+            navLinks.forEach(function (el) {
               el.classList.remove('header__menu-link--active');
             });
             item.classList.add('header__menu-link--active');
@@ -243,7 +243,7 @@ const loadPage = function (url) {
     })
 }
 
-menuLinks.forEach(function (el) {
+navLinks.forEach(function (el) {
   el.addEventListener('click', (e) => {
     e.preventDefault();
     const url = e.currentTarget.getAttribute('href');
@@ -252,7 +252,16 @@ menuLinks.forEach(function (el) {
 })
 
 loadPage(window.location.pathname);
+
+// window.addEventListener('hashchange', ()=>{
+  
+// })
+
 window.addEventListener('popstate', () => {
-  loadPage(window.location.pathname);
+  if(!window.location.href.includes('#')){
+    loadPage(window.location.pathname);
+  }
 })
+
+
 
