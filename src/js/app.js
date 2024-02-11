@@ -594,5 +594,7 @@ barba.hooks.enter((data) => {
   markActiveLink();
 });
 
-
+if (history.scrollRestoration) {
+  history.scrollRestoration = 'manual';
+}
 
