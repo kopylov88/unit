@@ -815,12 +815,14 @@
     display: none;
   }
 
-  .show-filters {
+  .apartments-show-filters,
+  .pantries-show-filters {
     display: flex;
+  }
 
-    &.active {
-      margin-bottom: 24px;
-    }
+  .apartments-show-filters,
+  .pantries-show-filters.active {
+    margin-bottom: 24px;
   }
 
   .form {
@@ -1102,7 +1104,8 @@
     display: none;
   }
 
-  .pantries__show-btn {
+  .apartments-show-filters,
+  .pantries-show-filters {
     display: none;
   }
 }

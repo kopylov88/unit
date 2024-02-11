@@ -6,13 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unit Future Development</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20240201081522" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20240211120055" />
 </head>
 
 <body>
-  <div class="loading-overlay">
-    <div class="loading-text">Loading...</div>
-  </div>
   <div class="wrapper">
     <header class="header">
   <div class="container">
@@ -58,78 +55,80 @@
             <option value="russian" selected>Русский</option>
           </select>
         </div>
-        <a class="header__btn header__btn--mobile btn" href="#connect">Записаться на просмотр</a>
+        <a class="header__btn header__btn--mobile btn link" href="#connect">Записаться на просмотр</a>
       </div>
     </div>
   </div>
 </header>
 
-    <main class="main">
-      <section class="contacts">
-        <div class="container">
-          <h2 class="contacts__title title">Контакты</h2>
-          <div class="contacts__body">
-            <div class="contacts__item">
-              <div class="contacts__item-head">Почта для связи</div>
-              <div class="contacts__item-value">
-                <a href="mailto:unitfiture@gmail.com">unitfiture@gmail.com</a>
+    <div data-barba="wrapper">
+      <main class="main" data-barba="container" data-barba-namespace="contacts">
+        <section class="contacts">
+          <div class="container">
+            <h2 class="contacts__title title">Контакты</h2>
+            <div class="contacts__body">
+              <div class="contacts__item">
+                <div class="contacts__item-head">Почта для связи</div>
+                <div class="contacts__item-value">
+                  <a href="mailto:unitfiture@gmail.com">unitfiture@gmail.com</a>
+                </div>
               </div>
-            </div>
-            <div class="contacts__item">
-              <div class="contacts__item-head">Номер телефона</div>
-              <div class="contacts__item-value">
-                <a href="tel:08003342233">0800 334 22 33</a>
+              <div class="contacts__item">
+                <div class="contacts__item-head">Номер телефона</div>
+                <div class="contacts__item-value">
+                  <a href="tel:08003342233">0800 334 22 33</a>
+                </div>
               </div>
-            </div>
-            <div class="contacts__item">
-              <div class="contacts__item-head">Улица</div>
-              <div class="contacts__item-value">
-                Шевченко 18/15
+              <div class="contacts__item">
+                <div class="contacts__item-head">Улица</div>
+                <div class="contacts__item-value">
+                  Шевченко 18/15
+                </div>
               </div>
-            </div>
-            <div class="contacts__item">
-              <div class="contacts__item-head">Социальные сети</div>
-              <div class="contacts__item-value">
-                <ul class="contacts__socials">
-                  <li class="contacts__socials-item">
-                    <a class="contacts__socials-link" href="#">
-                      <img src="img/icons/viber.svg" alt="viber icon">
-                    </a>
-                  </li>
-                  <li class="contacts__socials-item">
-                    <a class="contacts__socials-link" href="#">
-                      <img src="img/icons/youtube.svg" alt="youtube icon">
-                    </a>
-                  </li>
-                  <li class="contacts__socials-item">
-                    <a class="contacts__socials-link" href="#">
-                      <img src="img/icons/facebook.svg" alt="facebook icon">
-                    </a>
-                  </li>
-                  <li class="contacts__socials-item">
-                    <a class="contacts__socials-link" href="#">
-                      <img src="img/icons/instagram.svg" alt="instagram icon">
-                    </a>
-                  </li>
-                </ul>
+              <div class="contacts__item">
+                <div class="contacts__item-head">Социальные сети</div>
+                <div class="contacts__item-value">
+                  <ul class="contacts__socials">
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="#">
+                        <img src="img/icons/viber.svg" alt="viber icon">
+                      </a>
+                    </li>
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="#">
+                        <img src="img/icons/youtube.svg" alt="youtube icon">
+                      </a>
+                    </li>
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="#">
+                        <img src="img/icons/facebook.svg" alt="facebook icon">
+                      </a>
+                    </li>
+                    <li class="contacts__socials-item">
+                      <a class="contacts__socials-link" href="#">
+                        <img src="img/icons/instagram.svg" alt="instagram icon">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="connect" id="connect">
-        <div class="container">
-          <div class="connect__inner">
-            <form class="connect__form">
-              <h2 class="connect__title title">Записаться на просмотр</h2>
-              <input class="connect__form-input" type="text" placeholder="Ваше имя" />
-              <input class="connect__form-input" type="tel" placeholder="Ваш телефон" />
-              <button class="connect__form-btn btn" type="submit">Записаться</button>
-            </form>
+        </section>
+        <section class="connect" id="connect">
+          <div class="container">
+            <div class="connect__inner">
+              <form class="connect__form">
+                <h2 class="connect__title title">Записаться на просмотр</h2>
+                <input class="connect__form-input" type="text" placeholder="Ваше имя" />
+                <input class="connect__form-input" type="tel" placeholder="Ваш телефон" />
+                <button class="connect__form-btn btn" type="submit">Записаться</button>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
     <footer class="footer">
   <div class="container">
     <div class="footer__inner">
@@ -349,7 +348,7 @@
     </div>
   </div>
 </footer>
-    <script src="js/app.min.js?_v=20240201081522"></script>
+    <script src="js/app.min.js?_v=20240211120055"></script>
   </div>
 </body>
 

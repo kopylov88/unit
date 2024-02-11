@@ -164,13 +164,24 @@ body {
 
 .filters {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 30px;
+  gap: 10px;
+  margin-bottom: 29px;
 
   &__item {
-    max-width: 328px;
+    max-width: 340px;
     width: 100%;
+  }
+
+  &__item--price {
+    max-width: 100%;
+    flex-grow: 1;
+  }
+
+  &__item-title {
+    font-size: 14px;
+    color: #a5a5a5;
+    margin-bottom: 8px;
+    min-height: 30px;
   }
 
   &__item-body {
@@ -180,22 +191,43 @@ body {
     border: 1px solid #39393c;
   }
 
-  &__item-value {
-    font-weight: 300;
-  }
-
-  &__item-title {
-    font-size: 14px;
-    color: #a5a5a5;
-    margin-bottom: 8px;
-  }
-
   &__item-checkbox {
 
     &:checked+.filter-rooms__checkbox {
       background: linear-gradient(93.53deg, #ffffff -12.52%, #ebeae5 102.93%);
       color: #232323;
     }
+  }
+
+
+  .filter-price__inputs,
+  .filter-area__inputs,
+  .filter-floor__inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    min-height: 32px;
+  }
+
+  .filter-price__input,
+  .filter-area__input,
+  .filter-floor__input {
+    padding: 0 10px;
+  }
+
+  .filter-price__label,
+  .filter-area__label,
+  .filter-floor__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filter-price__input::placeholder,
+  .filter-area__input::placeholder,
+  .filter-floor__input::placeholder {
+    color: inherit;
   }
 
   .filter-rooms {
@@ -221,51 +253,6 @@ body {
       gap: 5px;
     }
   }
-}
-
-.irs--flat {
-  height: auto;
-}
-
-.irs--flat .irs-handle {
-  top: 9px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: $accent-color;
-  cursor: pointer;
-}
-
-.irs-from,
-.irs-single,
-.irs-to {
-  display: none;
-}
-
-.irs--flat .irs-handle>i:first-child {
-  display: none;
-}
-
-.irs--flat .irs-bar {
-  height: 1px;
-  background-color: $accent-color;
-  top: 17px;
-}
-
-.irs--flat .irs-line {
-  height: 1px;
-  top: 17px;
-  background-color: rgba(118, 123, 255, 0.5);
-  box-shadow: 0px 0px 5px rgba(118, 123, 255, 0.35);
-}
-
-.irs--flat .irs-max,
-.irs--flat .irs-min {
-  display: none;
-}
-
-.irs-hidden-input {
-  transform: translateX(-1000%);
 }
 
 .title {
@@ -372,47 +359,75 @@ body {
   }
 }
 
-.show-filters {
+.apartments-show-filters,
+.pantries-show-filters {
   display: none;
   position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 20px;
-    right: 10px;
-    background-image: url('@img/icons/arrow-down-black.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: 0.3s;
-  }
-
-  &.active::after {
-    transform: rotateX(180deg);
-  }
 }
 
-.fade-out {
-  opacity: 0;
-  visibility: hidden;
+.apartments-show-filters:after,
+.pantries-show-filters:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 10px;
+  background-image: url('@img/icons/arrow-down-black.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s;
 }
 
-.loading-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #39393c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  opacity: 1;
-  font-size: 50px;
-  pointer-events: none;
-  transition: opacity .5s;
+.apartments-show-filters.active::after,
+.pantries-show-filters.active::after {
+  transform: rotateX(180deg);
+}
+
+// hide input type number arrows
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.noUi-target {
+  height: 20px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  margin-bottom: 10px;
+
+}
+
+.noUi-connects {
+  background: rgba($color: #767BFF, $alpha: 0.3);
+  height: 2px;
+  margin-top: 10px;
+}
+
+.noUi-connect {
+  background: #767BFF;
+}
+
+.noUi-horizontal .noUi-handle {
+  top: -9px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  background: #767BFF;
+
+  &:after,
+  &:before {
+    display: none;
+  }
 }

@@ -10,505 +10,529 @@
 </head>
 
 <body>
-  <div class="loading-overlay">
-    <div class="loading-text">Loading...</div>
-  </div>
   <div class="wrapper">
     @@include('html/header.html', {})
-    <main class="main">
-      <section class="apartments">
-        <div class="container">
-          <h2 class="apartments__title title">Выбор квартиры</h2>
-          <button class="show-filters btn">Фильтр</button>
-          <form class="apartments__form form">
-            <div class="apartments__form-filters filters">
-              <div class="filters__item filter-rooms">
-                <h6 class="filters__item-title">Количество комнат</h6>
-                <div class="filter-rooms__labels">
-                  <label class="filters__item-label">
-                    <input class="filters__item-checkbox visually-hidden" type="checkbox" name="studio" />
-                    <span class="filter-rooms__checkbox">Студия</span>
-                  </label>
-                  <label class="filters__item-label">
-                    <input class="filters__item-checkbox visually-hidden" type="checkbox" name="1-room" />
-                    <span class="filter-rooms__checkbox">1</span>
-                  </label>
-                  <label class="filters__item-label">
-                    <input class="filters__item-checkbox visually-hidden" type="checkbox" name="2-room" />
-                    <span class="filter-rooms__checkbox">2</span>
-                  </label>
-                  <label class="filters__item-label">
-                    <input class="filters__item-checkbox visually-hidden" type="checkbox" name="3-room-more" />
-                    <span class="filter-rooms__checkbox">3+</span>
-                  </label>
-                </div>
-              </div>
-              <div class="filters__item">
-                <h6 class="filters__item-title">Цена в рублях</h6>
-                <div class="filters__item-body">
-                  <div class="filters__item-value">
-                    от <span class="price-from"></span> - до <span class="price-to"></span>
+    <div data-barba="wrapper">
+      <main class="main" data-barba="container" data-barba-namespace="apartments">
+        <section class="apartments">
+          <div class="container">
+            <h2 class="apartments__title title">Выбор квартиры</h2>
+            <button class="apartments-show-filters btn">Фильтр</button>
+            <form class="apartments__form form">
+              <div class="apartments__form-filters filters">
+                <div class="filters__item filter-rooms">
+                  <h6 class="filters__item-title">Количество комнат</h6>
+                  <div class="filter-rooms__labels">
+                    <label class="filters__item-label">
+                      <input class="filters__item-checkbox visually-hidden" type="checkbox" name="studio" />
+                      <span class="filter-rooms__checkbox">Студия</span>
+                    </label>
+                    <label class="filters__item-label">
+                      <input class="filters__item-checkbox visually-hidden" type="checkbox" name="1-room" />
+                      <span class="filter-rooms__checkbox">1</span>
+                    </label>
+                    <label class="filters__item-label">
+                      <input class="filters__item-checkbox visually-hidden" type="checkbox" name="2-room" />
+                      <span class="filter-rooms__checkbox">2</span>
+                    </label>
+                    <label class="filters__item-label">
+                      <input class="filters__item-checkbox visually-hidden" type="checkbox" name="3-room-more" />
+                      <span class="filter-rooms__checkbox">3+</span>
+                    </label>
                   </div>
-                  <input class="range-price" type="range" data-type="double" data-from="2000000" data-to="4000000"
-                    data-min="1500000" data-max="5000000" name="price" />
                 </div>
-              </div>
-              <div class="filters__item">
-                <h6 class="filters__item-title">Площадь м<sup>2</sup></h6>
-                <div class="filters__item-body">
-                  <div class="filters__item-value">
-                    от <span class="square-from"></span> - до <span class="square-to"></span>
+                <div class="filters__item filters__item--price">
+                  <h6 class="filters__item-title">Цена</h6>
+                  <div class="filters__item-body">
+                    <div class="filter-price__inputs">
+                      <label class="filter-price__label">
+                        <span class="filter-price__text">от</span>
+                        <input class="filter-price__input" type="number" min="2500000" max="6000000" id="input-apartments-0" placeholder="2500000">
+                        <span class="filter-price__text">руб</span>
+                      </label>
+                      <label class="filter-price__label">
+                        <span class="filter-price__text">до</span>
+                        <input class="filter-price__input" type="number" min="2500000" max="6000000" id="input-apartments-1" placeholder="6000000">
+                        <span class="filter-price__text">руб</span>
+                      </label>
+                    </div>
+                    <div class="filter-price__range">
+                    </div>
                   </div>
-                  <input class="range-square" type="range" data-type="double" data-from="34.2" data-to="51.9"
-                    data-min="19.2" data-max="105.6" name="square" />
                 </div>
-              </div>
-              <div class="filters__item">
-                <h6 class="filters__item-title">Этаж</h6>
-                <div class="filters__item-body">
-                  <div class="filters__item-value">
-                    от <span class="floor-from"></span> - до <span class="floor-to"></span>
+                <div class="filters__item">
+                  <h6 class="filters__item-title">Площадь</h6>
+                  <div class="filters__item-body">
+                    <div class="filter-area__inputs">
+                      <label class="filter-area__label">
+                        <span class="filter-area__text">от</span>
+                        <input class="filter-area__input" type="number" min="32" max="150" id="input-apartments-2"placeholder="32">
+                        <span class="filter-area__text">м<sup>2</sup></span>
+                      </label>
+                      <label class="filter-area__label">
+                        <span class="filter-area__text">до</span>
+                        <input class="filter-area__input" type="number" min="32" max="150" id="input-apartments-3"placeholder="150">
+                        <span class="filter-area__text">м<sup>2</sup></span>
+                      </label>
+                    </div>
+                    <div class="filter-area__range">
+                    </div>
                   </div>
-                  <input class="range-floor" type="range" data-type="double" data-from="2" data-to="9" data-min="1"
-                    data-max="25" name="floor" />
+                </div>
+                <div class="filters__item">
+                  <h6 class="filters__item-title">Этаж</h6>
+                  <div class="filters__item-body">
+                    <div class="filter-floor__inputs">
+                      <label class="filter-floor__label">
+                        <span class="filter-floor__text">от</span>
+                        <input class="filter-floor__input" type="number" min="1" max="20" id="input-apartments-4" placeholder="1">
+                      </label>
+                      <label class="filter-floor__label">
+                        <span class="filter-floor__text">до</span>
+                        <input class="filter-floor__input" type="number" min="1" max="20" id="input-apartments-5" placeholder="20">
+                      </label>
+                    </div>
+                    <div class="filter-floor__range">
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="apartments__selects">
+              <div class="apartments__selects">
+                <div class="apartments__select">
+                  <h6 class="apartments__select-title">Готовность</h6>
+                  <select class="js-choice" name="ready">
+                    <option value="all" selected>Любая</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </div>
+                <div class="apartments__select">
+                  <h6 class="apartments__select-title">Корпус</h6>
+                  <select class="js-choice" name="ready">
+                    <option value="all" selected>Любой</option>
+                    <option value="2023">A</option>
+                    <option value="2024">B</option>
+                    <option value="2025">C</option>
+                    <option value="2023">D</option>
+                    <option value="2024">E</option>
+                    <option value="2025">F</option>
+                  </select>
+                </div>
+              </div>
+              <div class="apartments__checkboxes-wrap">
+                <div class="apartments__checkboxes">
+                  <h6 class="apartments__checkboxes-title">Преимущества</h6>
+                  <div class="apartments__checkboxes-inner">
+                    <label class="apartments__checkboxes-label">
+                      <input class="apartments__checkboxes-input visually-hidden" type="checkbox" name="finishing" />
+                      <span class="apartments__checkboxes-custom"></span>
+                      Отделка
+                    </label>
+                    <label class="apartments__checkboxes-label">
+                      <input class="apartments__checkboxes-input visually-hidden" type="checkbox" name="with terrace" />
+                      <span class="apartments__checkboxes-custom"></span>
+                      С террасой
+                    </label>
+                    <label class="apartments__checkboxes-label">
+                      <input class="apartments__checkboxes-input visually-hidden" type="checkbox"
+                        name="kitchen-living room" />
+                      <span class="apartments__checkboxes-custom"></span>
+                      Кухня-гостиная
+                    </label>
+                    <label class="apartments__checkboxes-label">
+                      <input class="apartments__checkboxes-input visually-hidden" type="checkbox" name="wardrobe" />
+                      <span class="apartments__checkboxes-custom"></span>
+                      Гардеробная
+                    </label>
+                  </div>
+                </div>
+                <div class="apartments__checkboxes">
+                  <h6 class="apartments__checkboxes-title">Количество санузлов</h6>
+                  <div class="apartments__checkboxes-inner">
+                    <label class="apartments__checkboxes-label">
+                      <input class="apartments__checkboxes-input visually-hidden" type="checkbox"
+                        name="single bathroom" />
+                      <span class="apartments__checkboxes-custom"></span>
+                      Один
+                    </label>
+                    <label class="apartments__checkboxes-label">
+                      <input class="apartments__checkboxes-input visually-hidden" type="checkbox"
+                        name="2 and more bathrooms" />
+                      <span class="apartments__checkboxes-custom"></span>
+                      Два и более
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__btns">
+                <button class="form__btn btn" type="submit">Применить</button>
+                <p class="form__value">Доступно <span>738</span> квартир</p>
+                <button class="form__reset form__reset--apartments btn" type="reset">Очистить</button>
+              </div>
+            </form>
+            <div class="apartments__box">
               <div class="apartments__select">
-                <h6 class="apartments__select-title">Готовность</h6>
-                <select class="js-choice" name="ready">
-                  <option value="all" selected>Любая</option>
-                  <option value="2023">2023</option>
-                  <option value="2024">2024</option>
-                  <option value="2025">2025</option>
+                <h6 class="apartments__select-title">Сортировать по</h6>
+                <select class="js-choice" name="sort">
+                  <option value="cheaper" selected>Сначала дешевле</option>
+                  <option value="expensive">Сначала дороже</option>
                 </select>
               </div>
-              <div class="apartments__select">
-                <h6 class="apartments__select-title">Корпус</h6>
-                <select class="js-choice" name="ready">
-                  <option value="all" selected>Любой</option>
-                  <option value="2023">A</option>
-                  <option value="2024">B</option>
-                  <option value="2025">C</option>
-                  <option value="2023">D</option>
-                  <option value="2024">E</option>
-                  <option value="2025">F</option>
-                </select>
+              <div class="apartments__items">
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/1.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/2.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/3.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments__item-info apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/4.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/5.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/6.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/7.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/8.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/9.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/10.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/11.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="apartments__item item-apartments" href="apartment.html">
+                  <p class="item-apartments__number">кв-4-31-6</p>
+                  <img class="item-apartments__img" src="@img/apartments/12.png" alt="apartment image" />
+                  <ul class="item-apartments__list">
+                    <li class="item-apartments__row">
+                      <span>Комнат</span>
+                      <span>1</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Этаж</span>
+                      <span>4</span>
+                    </li>
+                    <li class="item-apartments__row">
+                      <span>Корпус</span>
+                      <span>6</span>
+                    </li>
+                  </ul>
+                  <div class="apartments-info">
+                    <div class="apartments-info__item apartments-info__item--square">
+                      <span>Площадь</span>
+                      <span>28.5 м <sup>2</sup></span>
+                    </div>
+                    <div class="apartments-info__item apartments-info__item--price">
+                      <span>Цена</span>
+                      <span>2500000 руб</span>
+                    </div>
+                  </div>
+                </a>
               </div>
+              <button class="apartments__box-showmore">Показать ещё <span>722</span> картиры</button>
             </div>
-            <div class="apartments__checkboxes-wrap">
-              <div class="apartments__checkboxes">
-                <h6 class="apartments__checkboxes-title">Преимущества</h6>
-                <div class="apartments__checkboxes-inner">
-                  <label class="apartments__checkboxes-label">
-                    <input class="apartments__checkboxes-input visually-hidden" type="checkbox" name="finishing" />
-                    <span class="apartments__checkboxes-custom"></span>
-                    Отделка
-                  </label>
-                  <label class="apartments__checkboxes-label">
-                    <input class="apartments__checkboxes-input visually-hidden" type="checkbox" name="with terrace" />
-                    <span class="apartments__checkboxes-custom"></span>
-                    С террасой
-                  </label>
-                  <label class="apartments__checkboxes-label">
-                    <input class="apartments__checkboxes-input visually-hidden" type="checkbox"
-                      name="kitchen-living room" />
-                    <span class="apartments__checkboxes-custom"></span>
-                    Кухня-гостиная
-                  </label>
-                  <label class="apartments__checkboxes-label">
-                    <input class="apartments__checkboxes-input visually-hidden" type="checkbox" name="wardrobe" />
-                    <span class="apartments__checkboxes-custom"></span>
-                    Гардеробная
-                  </label>
-                </div>
-              </div>
-              <div class="apartments__checkboxes">
-                <h6 class="apartments__checkboxes-title">Количество санузлов</h6>
-                <div class="apartments__checkboxes-inner">
-                  <label class="apartments__checkboxes-label">
-                    <input class="apartments__checkboxes-input visually-hidden" type="checkbox"
-                      name="single bathroom" />
-                    <span class="apartments__checkboxes-custom"></span>
-                    Один
-                  </label>
-                  <label class="apartments__checkboxes-label">
-                    <input class="apartments__checkboxes-input visually-hidden" type="checkbox"
-                      name="2 and more bathrooms" />
-                    <span class="apartments__checkboxes-custom"></span>
-                    Два и более
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="form__btns">
-              <button class="form__btn btn" type="submit">Применить</button>
-              <p class="form__value">Доступно <span>738</span> квартир</p>
-              <button class="apartments__form-reset form__reset btn" type="reset">Очистить</button>
-            </div>
-          </form>
-          <div class="apartments__box">
-            <div class="apartments__select">
-              <h6 class="apartments__select-title">Сортировать по</h6>
-              <select class="js-choice" name="sort">
-                <option value="cheaper" selected>Сначала дешевле</option>
-                <option value="expensive">Сначала дороже</option>
-              </select>
-            </div>
-            <div class="apartments__items">
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/1.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/2.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/3.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments__item-info apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/4.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/5.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/6.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/7.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/8.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/9.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/10.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/11.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-              <a class="apartments__item item-apartments" href="apartment.html">
-                <p class="item-apartments__number">кв-4-31-6</p>
-                <img class="item-apartments__img" src="@img/apartments/12.png" alt="apartment image" />
-                <ul class="item-apartments__list">
-                  <li class="item-apartments__row">
-                    <span>Комнат</span>
-                    <span>1</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Этаж</span>
-                    <span>4</span>
-                  </li>
-                  <li class="item-apartments__row">
-                    <span>Корпус</span>
-                    <span>6</span>
-                  </li>
-                </ul>
-                <div class="apartments-info">
-                  <div class="apartments-info__item apartments-info__item--square">
-                    <span>Площадь</span>
-                    <span>28.5 м <sup>2</sup></span>
-                  </div>
-                  <div class="apartments-info__item apartments-info__item--price">
-                    <span>Цена</span>
-                    <span>2500000 руб</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <button class="apartments__box-showmore">Показать ещё <span>722</span> картиры</button>
           </div>
-        </div>
-      </section>
-      <section class="connect" id="connect">
-        <div class="container">
-          <form class="connect__form">
-            <h2 class="connect__title title">Записаться на просмотр</h2>
-            <input class="connect__form-input" type="text" placeholder="Ваше имя" />
-            <input class="connect__form-input" type="tel" placeholder="Ваш телефон" />
-            <button class="connect__form-btn btn" type="submit">Записаться</button>
-          </form>
-        </div>
-      </section>
-    </main>
+        </section>
+        <section class="connect" id="connect">
+          <div class="container">
+            <form class="connect__form">
+              <h2 class="connect__title title">Записаться на просмотр</h2>
+              <input class="connect__form-input" type="text" placeholder="Ваше имя" />
+              <input class="connect__form-input" type="tel" placeholder="Ваш телефон" />
+              <button class="connect__form-btn btn" type="submit">Записаться</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
     @@include('html/footer.html', {})
     <script src="js/app.min.js"></script>
   </div>
