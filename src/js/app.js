@@ -592,6 +592,7 @@ barba.init({
 
 barba.hooks.enter((data) => {
   markActiveLink();
+  window.scroll(0,0);
 });
 
 if (history.scrollRestoration) {
